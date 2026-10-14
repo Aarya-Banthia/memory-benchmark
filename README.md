@@ -1,20 +1,65 @@
-# Read-time memory: a cheap model that searches raw history
+<div align="center">
 
-Most AI memory layers work at **write time**. As a conversation happens, they extract "facts", embed them and store them in a vector database, and later they retrieve those facts. Anything the extractor dropped is gone.
+# Read-time memory
 
-This repo tests the opposite approach, **read-time memory**:
+### Relevance can't be judged at write time.
 
-- Keep the raw history exactly as it was.
-- Decide nothing until a question arrives.
-- Then let a small, cheap model search the record itself with plain tools (regex search, read a range, count), the way you would grep a codebase.
-- A final verify step re-checks the answer against everything that was retrieved.
+A cheap model that searches the raw conversation history, at the moment a question is asked, scores **2.2x the best published system** on a 1M-token memory benchmark.
 
-There is no extraction, no embeddings and no vector database.
+![BEAM-1M](https://img.shields.io/badge/BEAM--1M-0.746-2a78d6) ![best published](https://img.shields.io/badge/best_published-0.336-8f8d86) ![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-94.6%25-2a78d6) ![cost](https://img.shields.io/badge/cost-~%240.01_per_question-8f8d86) ![license](https://img.shields.io/badge/license-MIT-8f8d86)
+
+[Why read-time](#why-read-time-memory) · [Results](#results) · [How it works](#how-the-harness-works) · [Reproduce](#reproduce)
+
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/beam_vs_paper_dark.png">
   <img alt="BEAM-1M average score: long-context model 0.26, RAG 0.31, LIGHT 0.34 (best in the BEAM paper), read-time search 0.746" src="assets/beam_vs_paper_light.png">
 </picture>
+
+## Why read-time memory
+
+Most AI memory layers work at **write time**. As you chat, an LLM reads each message and decides what is worth keeping. It extracts "facts", embeds them and stores them. Later, when you ask something, it retrieves the facts that look most similar.
+
+That design rests on an assumption that cannot hold: **that you can tell what will matter before anyone has asked.**
+
+Relevance is not a property of a piece of information. It is a relationship between information and a question. At write time, the question does not exist yet. So the extractor is forced to guess, once, permanently, on behalf of every question anyone will ever ask. Whatever it guesses wrong is gone.
+
+Read-time memory moves the decision to the only moment it can be made well: **when the question arrives**. Keep the raw history. When a question comes in, let a model search the original words with the question in hand, then check its answer against what it found.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/why_dark.svg">
+  <img alt="Write-time memory judges relevance when extracting facts, before any question exists. Read-time memory keeps the raw history and judges relevance while searching, after the question arrives." src="assets/why_light.svg">
+</picture>
+
+### A small example
+
+> **March:** "Move the standup to 9:30, the 9am clashes with school drop-off on Tuesdays."
+
+A write-time extractor sensibly stores: *Standup is at 9:30.*
+
+> **June:** "Can I take a 9am client call next Tuesday?"
+
+The stored fact says nothing about Tuesdays or school drop-off. The extractor did its job. It just could not know that the reason would become the important part. The raw message still says it, and a search for "Tuesday" or "9am" finds it in milliseconds.
+
+### Why this matters
+
+1. **Future questions are unbounded.** An extractor has to anticipate every question that will ever be asked of the history. Nobody can do that, human or model.
+2. **Extraction is lossy and one-way.** Reasons, qualifiers, who said it, how sure they were, the exact wording and the order of events get compressed away. Nothing downstream can recover them.
+3. **Change gets flattened.** Overwriting "lives in Pune" with "lives in Mumbai" erases the fact that something changed, and when. Questions about updates, contradictions and sequences need exactly that history.
+4. **Mistakes are silent and permanent.** A bad extraction is never revisited, because the source it came from was discarded.
+5. **Raw history improves with every model.** Extracted facts are frozen at the quality of the extractor that wrote them. The raw record can be re-read by next year's model, so read-time memory gets better for free.
+6. **Cost lands where the value is.** Write-time pays for an LLM call on every message, though most messages are never asked about. Read-time pays only when someone asks a question. Storing raw text is nearly free.
+
+### When write-time still wins
+
+Being fair to the other side:
+
+- **Latency.** One vector lookup is faster than a search loop. Here it takes about 3 model steps per question on LongMemEval and about 7 on BEAM-1M.
+- **Very high query volume** over a small, stable set of facts can make precomputing cheaper.
+- **Scale.** Regex over raw text grows linearly with the corpus. At enterprise scale you would add an inverted index. That is still raw text and still read-time.
+
+Our view: the best design keeps the **raw history as the source of truth**. Write-time structure such as indexes, timelines and entity maps is useful as a **map that points into it**, never as a replacement for it.
 
 ## Results
 
@@ -98,7 +143,7 @@ results/
   beam_1m/official_verdicts_gpt-4.1-mini.jsonl             every rubric verdict with the judge's reasons
   beam_1m/crosscheck_verdicts_claude.json
 summarize.py            recomputes all tables from results/
-assets/                 charts (light and dark) and make_charts.py, which redraws them from results/
+assets/                 charts and diagram (light and dark); make_charts.py and make_diagram.py redraw them
 ```
 
 ## How the harness works

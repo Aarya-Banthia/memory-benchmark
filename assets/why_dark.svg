@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="490" viewBox="0 0 1020 490" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="1020" height="490" fill="#0d1117"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a9990"/></marker></defs>
+<line x1="510" y1="52" x2="510" y2="470" stroke="#f0efec" stroke-width="1.5" stroke-dasharray="5 5"/>
+<text x="510" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#f0efec">a question arrives</text>
+<text x="494" y="48" text-anchor="end" font-size="12" fill="#9a9990">before</text>
+<text x="526" y="48" text-anchor="start" font-size="12" fill="#9a9990">after</text>
+<text x="40" y="66" font-size="16" font-weight="700" fill="#f0efec">Write-time memory</text>
+<text x="40" y="84" font-size="12" fill="#9a9990">how most memory layers work: extract facts, embed, retrieve</text>
+<rect x="40" y="102" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="52" y="127" font-size="13.5" font-weight="700" fill="#f0efec">Conversation</text>
+<text x="52" y="145" font-size="11" fill="#c3c2b7">every message</text>
+<line x1="174" y1="137.0" x2="190" y2="137.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="195" y="102" width="130" height="70" rx="10" fill="#2a1c16" stroke="#d95926" stroke-width="2"/>
+<text x="207" y="127" font-size="13.5" font-weight="700" fill="#f0efec">Extract facts</text>
+<text x="207" y="145" font-size="11" fill="#c3c2b7">an LLM guesses</text>
+<text x="207" y="159" font-size="11" fill="#c3c2b7">what will matter</text>
+<line x1="329" y1="137.0" x2="345" y2="137.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="260.0" y1="176" x2="260.0" y2="192" stroke="#d95926" stroke-width="2"/>
+<text x="260.0" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#f0efec">Relevance is judged here,</text>
+<text x="260.0" y="227" text-anchor="middle" font-size="12" font-weight="400" fill="#c3c2b7">before any question exists.</text>
+<text x="260.0" y="244" text-anchor="middle" font-size="12" font-weight="400" fill="#c3c2b7">Whatever it drops is gone.</text>
+<rect x="350" y="102" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="362" y="127" font-size="13.5" font-weight="700" fill="#f0efec">Embed + store</text>
+<text x="362" y="145" font-size="11" fill="#c3c2b7">only the facts</text>
+<text x="362" y="159" font-size="11" fill="#c3c2b7">are kept</text>
+<line x1="484" y1="137.0" x2="535" y2="137.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="540" y="102" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="552" y="127" font-size="13.5" font-weight="700" fill="#f0efec">Retrieve top-k</text>
+<text x="552" y="145" font-size="11" fill="#c3c2b7">facts that look</text>
+<text x="552" y="159" font-size="11" fill="#c3c2b7">similar</text>
+<line x1="674" y1="137.0" x2="690" y2="137.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="695" y="102" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="707" y="127" font-size="13.5" font-weight="700" fill="#f0efec">Answer</text>
+<text x="707" y="145" font-size="11" fill="#c3c2b7">from whatever</text>
+<text x="707" y="159" font-size="11" fill="#c3c2b7">survived</text>
+<text x="40" y="304" font-size="16" font-weight="700" fill="#f0efec">Read-time memory</text>
+<text x="40" y="322" font-size="12" fill="#9a9990">this repo: keep everything, decide when asked</text>
+<rect x="195" y="340" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="207" y="365" font-size="13.5" font-weight="700" fill="#f0efec">Conversation</text>
+<text x="207" y="383" font-size="11" fill="#c3c2b7">every message</text>
+<line x1="329" y1="375.0" x2="345" y2="375.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="350" y="340" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="362" y="365" font-size="13.5" font-weight="700" fill="#f0efec">Keep it raw</text>
+<text x="362" y="383" font-size="11" fill="#c3c2b7">nothing is</text>
+<text x="362" y="397" font-size="11" fill="#c3c2b7">thrown away</text>
+<line x1="484" y1="375.0" x2="535" y2="375.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="540" y="340" width="130" height="70" rx="10" fill="#14243a" stroke="#3987e5" stroke-width="2"/>
+<text x="552" y="365" font-size="13.5" font-weight="700" fill="#f0efec">Search, read</text>
+<text x="552" y="383" font-size="11" fill="#c3c2b7">the model hunts</text>
+<text x="552" y="397" font-size="11" fill="#c3c2b7">with the question</text>
+<line x1="674" y1="375.0" x2="690" y2="375.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="605.0" y1="414" x2="605.0" y2="430" stroke="#3987e5" stroke-width="2"/>
+<text x="540" y="448" text-anchor="start" font-size="13" font-weight="700" fill="#f0efec">Relevance is judged here,</text>
+<text x="540" y="465" text-anchor="start" font-size="12" font-weight="400" fill="#c3c2b7">with the question in hand.</text>
+<rect x="695" y="340" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="707" y="365" font-size="13.5" font-weight="700" fill="#f0efec">Verify</text>
+<text x="707" y="383" font-size="11" fill="#c3c2b7">re-check against</text>
+<text x="707" y="397" font-size="11" fill="#c3c2b7">the evidence</text>
+<line x1="829" y1="375.0" x2="845" y2="375.0" stroke="#9a9990" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="850" y="340" width="130" height="70" rx="10" fill="#1b2028" stroke="none" stroke-width="2"/>
+<text x="862" y="365" font-size="13.5" font-weight="700" fill="#f0efec">Answer</text>
+<text x="862" y="383" font-size="11" fill="#c3c2b7">grounded in the</text>
+<text x="862" y="397" font-size="11" fill="#c3c2b7">original words</text>
+</svg>
