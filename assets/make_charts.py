@@ -9,8 +9,8 @@ for f in fm.findSystemFonts():
     if '/inter/' in f.lower(): fm.fontManager.addfont(f)
 plt.rcParams['font.family'] = 'Inter'
 THEMES = {
- 'light': dict(bg='#ffffff', ink='#0b0b0b', ink2='#52514e', muted='#6f6e69', grid='#e8e7e3', hi='#2a78d6', base='#8f8d86'),
- 'dark':  dict(bg='#0d1117', ink='#f0efec', ink2='#c3c2b7', muted='#9a9990', grid='#262c34', hi='#3987e5', base='#75746e'),
+ 'light': dict(bg='#ffffff', ink='#0b0b0b', ink2='#52514e', muted='#6f6e69', grid='#e8e7e3', hi='#2a78d6', base='#8f8d86', alt='#eb6834'),
+ 'dark':  dict(bg='#0d1117', ink='#f0efec', ink2='#c3c2b7', muted='#9a9990', grid='#262c34', hi='#3987e5', base='#75746e', alt='#d95926'),
 }
 
 def hbar_chart(fname, theme, title, subtitle, rows, xmax, fmt, note, size=(10, 4.6), hi_label=None, ann=None, title_size=17, label_bold=True):
@@ -56,53 +56,57 @@ ours_keys = {json.loads(l)['key'] for l in open(R + 'beam_1m/official_verdicts_g
 OURS = ability_means(R + 'beam_1m/official_verdicts_gpt-4.1-mini.jsonl')
 RAG5 = ability_means(R + 'beam_1m/rag_same_model/rag_top5_official_verdicts_gpt-4.1-mini.jsonl', ours_keys)
 RAG32 = ability_means(R + 'beam_1m/rag_same_model/rag_full32k_official_verdicts_gpt-4.1-mini.jsonl', ours_keys)
+MEM0 = ability_means(R + 'beam_1m/mem0_platform/mem0_platform_official_verdicts_gpt-4.1-mini.jsonl', ours_keys)
 mean = lambda d: sum(d.values()) / len(d)
-o, r5, r32 = round(mean(OURS), 3), round(mean(RAG5), 3), round(mean(RAG32), 3)
+o, r5, r32, m0 = round(mean(OURS), 3), round(mean(RAG5), 3), round(mean(RAG32), 3), round(mean(MEM0), 3)
 
-f2 = lambda v: f'{v:.3f}' if v in (o,) else f'{v:.2f}'
+f2 = lambda v: f'{v:.3f}' if v in (o, m0) else f'{v:.2f}'
 def beam_ann(ax, t, ys):
     y = ys['Read-time search']
-    ax.text(o + 0.012, y - 0.42, f'+{o - r32:.2f} over the best RAG', va='center', ha='left', fontsize=10.5, color=t['ink2'])
+    ax.text(o + 0.012, y - 0.42, f'+{o - m0:.2f} over mem0', va='center', ha='left', fontsize=10.5, color=t['ink2'])
 beam_rows = [
     ('BEAM paper, older models', None, False, None),
     ('Long-context model', 0.259, False, 'whole conversation in the prompt'),
     ('RAG', 0.307, False, 'vector retrieval, top 5'),
     ('LIGHT', 0.336, False, "the paper's best memory system"),
+    ('Write-time memory, same official grader', None, False, None),
+    ('mem0 (managed platform)', m0, False, 'its published answers, GPT-5 answering'),
     ('Same model: GLM-5.3-flash', None, False, None),
     ('RAG, paper setup', r5, False, 'top 5 turn pairs'),
     ('RAG, full 32K context', r32, False, 'about 25 turn pairs'),
     ('Read-time search', o, True, 'this repo: search the raw history'),
 ]
-NOTE = ("Paper rows: best result per method across 4 backbone models, BEAM paper (arXiv 2510.27246), Table 1.\n"
-        "Same-model rows: paper's RAG setup with GLM-5.3-flash. All scored with the official BEAM code and judge (GPT-4.1-mini), 699 questions.")
+NOTE = ("Paper rows: best result per method across 4 backbone models, BEAM paper (arXiv 2510.27246), Table 1. mem0: its own published answers\n"
+        "(github.com/mem0ai/memory-benchmarks). Same-model rows: GLM-5.3-flash. All non-paper rows scored with the official BEAM code and judge, same 699 questions.")
 for th in THEMES:
     hbar_chart(f'beam_vs_paper_{th}.png', th,
-               'BEAM-1M: with the same cheap model, read-time search beats RAG by %.2f' % (o - r32),
+               'BEAM-1M: a cheap model searching raw history beats mem0 and RAG',
                'Average score across 10 memory abilities on 1M-token conversations. Higher is better.',
-               beam_rows, 1.0, f2, NOTE, size=(10, 6.2), ann=beam_ann, title_size=16)
+               beam_rows, 1.0, f2, NOTE, size=(10, 7.0), ann=beam_ann, title_size=16)
 hbar_chart('social_card.png', 'light',
            "Relevance can't be judged at write time",
-           'BEAM-1M, 1M-token conversations. Same cheap model: search the raw history at question time vs RAG.',
+           'BEAM-1M, 1M-token conversations, official grader. Read-time search vs mem0 and RAG.',
            beam_rows, 1.0, f2,
-           'Official BEAM scoring code and judge. Paper rows from the BEAM paper, Table 1.   github.com/Aarya-Banthia/memory-benchmark',
-           size=(12, 7.2), ann=beam_ann, title_size=24)
+           'Official BEAM scoring code and judge. mem0: its own published answers. Paper rows: BEAM paper, Table 1.   github.com/Aarya-Banthia/memory-benchmark',
+           size=(12, 8.0), ann=beam_ann, title_size=24)
 
 # abilities: paired bars, read-time vs best same-model RAG
 names = {'instruction_following': 'Following standing instructions', 'preference_following': 'Following preferences', 'information_extraction': 'Recalling facts',
          'abstention': 'Saying "not in the history"', 'knowledge_update': 'Using the latest value', 'multi_session_reasoning': 'Reasoning across sessions',
          'contradiction_resolution': 'Flagging contradictions', 'summarization': 'Summarizing', 'temporal_reasoning': 'Date and time reasoning', 'event_ordering': 'Ordering events (strict metric)'}
-ab = sorted(OURS, key=lambda k: -(OURS[k] - RAG32[k]))
+ab = sorted(OURS, key=lambda k: -(OURS[k] - MEM0[k]))
 for th in THEMES:
     t = THEMES[th]
-    fig, ax = plt.subplots(figsize=(10, 7.2), dpi=200)
+    fig, ax = plt.subplots(figsize=(10, 8.4), dpi=200)
     fig.patch.set_facecolor(t['bg']); ax.set_facecolor(t['bg'])
-    n = len(ab); h = 0.34
+    n = len(ab); h = 0.25
+    series = [(OURS, t['hi'], True), (MEM0, t['alt'], False), (RAG32, t['base'], False)]
     for i, k in enumerate(ab):
         y = n - 1 - i
-        ax.barh(y + h / 2 + 0.02, OURS[k], height=h, color=t['hi'], linewidth=0)
-        ax.barh(y - h / 2 - 0.02, RAG32[k], height=h, color=t['base'], linewidth=0)
-        ax.text(OURS[k] + 0.01, y + h / 2 + 0.02, f'{OURS[k]:.2f}', va='center', fontsize=10.5, color=t['ink'], fontweight='bold')
-        ax.text(RAG32[k] + 0.01, y - h / 2 - 0.02, f'{RAG32[k]:.2f}', va='center', fontsize=10.5, color=t['ink2'])
+        for j, (S, col, bold) in enumerate(series):
+            yy = y + h + 0.03 - j * (h + 0.03)
+            ax.barh(yy, S[k], height=h, color=col, linewidth=0)
+            ax.text(S[k] + 0.01, yy, f'{S[k]:.2f}', va='center', fontsize=9.5, color=t['ink'] if bold else t['ink2'], fontweight='bold' if bold else 'regular')
         ax.text(-0.02, y, names[k], va='center', ha='right', fontsize=11.5, color=t['ink'])
     ax.set_xlim(0, 1); ax.set_ylim(-0.6, n - 0.3); ax.set_yticks([])
     ax.tick_params(axis='x', colors=t['muted'], labelsize=10, length=0)
@@ -111,14 +115,14 @@ for th in THEMES:
     for s_ in ax.spines.values(): s_.set_visible(False)
     ax.axvline(0, color=t['muted'], lw=1)
     ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: '0' if not v else f'{v:.1f}'))
-    fig.text(0.02, 0.955, 'The biggest gains are where facts change or conflict', fontsize=16, fontweight='bold', color=t['ink'], va='top')
-    fig.text(0.02, 0.9, 'BEAM-1M by memory ability, both answered by GLM-5.3-flash, sorted by the size of the gap.', fontsize=11, color=t['ink2'], va='top')
-    lx = 0.36
-    for col, lab in ((t['hi'], 'Read-time search'), (t['base'], 'RAG, full 32K context')):
-        fig.patches.append(plt.Rectangle((lx, 0.835), 0.014, 0.022, transform=fig.transFigure, color=col, figure=fig))
-        fig.text(lx + 0.02, 0.846, lab, fontsize=10.5, color=t['ink'], va='center'); lx += 0.24
-    fig.text(0.02, 0.03, '70 questions per ability (69 for summarizing). Official BEAM scoring code and judge.\nOrdering is scored by Kendall tau on line-by-line alignment, so list format matters.', fontsize=9, color=t['muted'], va='bottom')
-    fig.subplots_adjust(left=0.36, right=0.95, top=0.8, bottom=0.14)
+    fig.text(0.02, 0.96, 'The biggest gains are where facts change or conflict', fontsize=16, fontweight='bold', color=t['ink'], va='top')
+    fig.text(0.02, 0.913, 'BEAM-1M by memory ability, official grader, same 699 questions. Sorted by the gap to mem0.', fontsize=11, color=t['ink2'], va='top')
+    lx = 0.30
+    for col, lab in ((t['hi'], 'Read-time search (GLM-5.3-flash)'), (t['alt'], 'mem0 platform (GPT-5)'), (t['base'], 'RAG, full 32K (GLM-5.3-flash)')):
+        fig.patches.append(plt.Rectangle((lx, 0.857), 0.012, 0.018, transform=fig.transFigure, color=col, figure=fig))
+        fig.text(lx + 0.017, 0.866, lab, fontsize=9.5, color=t['ink'], va='center'); lx += 0.235 if 'Read' in lab else 0.195
+    fig.text(0.02, 0.025, "70 questions per ability (69 for summarizing). mem0: its own published answers. Official BEAM scoring code and judge.\nOrdering is scored by Kendall tau on line-by-line alignment, so list format matters.", fontsize=9, color=t['muted'], va='bottom')
+    fig.subplots_adjust(left=0.36, right=0.95, top=0.83, bottom=0.11)
     fig.savefig(OUT + f'beam_by_ability_{th}.png', facecolor=t['bg']); plt.close(fig)
 print('BEAM overall', o, 'rag5', r5, 'rag32', r32)
 

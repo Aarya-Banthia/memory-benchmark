@@ -4,9 +4,9 @@
 
 ### Relevance can't be judged at write time.
 
-Same cheap model, same questions, official scoring: searching the raw conversation history at the moment a question is asked scores **0.746** on a 1M-token memory benchmark. RAG scores **0.568**.
+On a 1M-token memory benchmark, scored with the official grader, a cheap model searching the raw conversation history at question time scores **0.746**. mem0's own published answers (its managed platform, answered by GPT-5) score **0.632**. RAG with the same cheap model scores **0.568**.
 
-![BEAM-1M](https://img.shields.io/badge/BEAM--1M-0.746-2a78d6) ![RAG, same model](https://img.shields.io/badge/RAG,_same_model-0.568-8f8d86) ![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-94.6%25-2a78d6) ![cost](https://img.shields.io/badge/cost-~%240.01_per_question-8f8d86) ![license](https://img.shields.io/badge/license-MIT-8f8d86)
+![BEAM-1M](https://img.shields.io/badge/BEAM--1M-0.746-2a78d6) ![mem0, same grader](https://img.shields.io/badge/mem0,_same_grader-0.632-8f8d86) ![RAG, same model](https://img.shields.io/badge/RAG,_same_model-0.568-8f8d86) ![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-94.6%25-2a78d6) ![cost](https://img.shields.io/badge/cost-~%240.01_per_question-8f8d86) ![license](https://img.shields.io/badge/license-MIT-8f8d86)
 
 [Why read-time](#why-read-time-memory) · [Results](#results) · [How it works](#how-the-harness-works) · [Reproduce](#reproduce)
 
@@ -14,7 +14,7 @@ Same cheap model, same questions, official scoring: searching the raw conversati
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/beam_vs_paper_dark.png">
-  <img alt="BEAM-1M average score. BEAM paper with older models: long-context 0.26, RAG 0.31, LIGHT 0.34. Same model GLM-5.3-flash: RAG paper setup 0.50, RAG full 32K context 0.57, read-time search 0.746" src="assets/beam_vs_paper_light.png">
+  <img alt="BEAM-1M average score. BEAM paper with older models: long-context 0.26, RAG 0.31, LIGHT 0.34. mem0 managed platform published answers, official grader: 0.632. Same model GLM-5.3-flash: RAG paper setup 0.50, RAG full 32K context 0.57, read-time search 0.746" src="assets/beam_vs_paper_light.png">
 </picture>
 
 ## Why read-time memory
@@ -71,7 +71,7 @@ Both benchmarks were scored with their **official scoring code and official judg
 
 | Benchmark | Official judge | Score | Reference points |
 | --- | --- | --- | --- |
-| [BEAM](https://github.com/mohammadtavakoli78/BEAM), 1M-token conversations (699 of 700 questions) | GPT-4.1-mini, `src/evaluation/compute_metrics.py`; event ordering scored by Kendall tau as in `report_results.py` | **0.746** | Same model (GLM-5.3-flash), paper's RAG setup: 0.497 (top 5), 0.568 (full 32K context). BEAM paper at 1M, older models: long-context 0.19 to 0.26, RAG 0.27 to 0.31, LIGHT (paper's best) 0.28 to 0.34 |
+| [BEAM](https://github.com/mohammadtavakoli78/BEAM), 1M-token conversations (699 of 700 questions) | GPT-4.1-mini, `src/evaluation/compute_metrics.py`; event ordering scored by Kendall tau as in `report_results.py` | **0.746** | mem0's own published answers (managed platform, GPT-5), same official grader: 0.632. Same model (GLM-5.3-flash), paper's RAG setup: 0.497 (top 5), 0.568 (full 32K context). BEAM paper at 1M, older models: long-context 0.19 to 0.26, RAG 0.27 to 0.31, LIGHT (paper's best) 0.28 to 0.34 |
 | [LongMemEval-S](https://github.com/xiaowu0162/LongMemEval) (500 questions) | GPT-4o-2024-08-06, `src/evaluation/evaluate_qa.py` | **94.6%** | Paper: full-context GPT-4o 60.2%. Vendors self-report, on their own setups: Zep 71.2%, mem0 94.4% |
 
 - **Answering model:** GLM-5.3-flash (`zai/glm-5.3-flash`), a small, cheap model, called through an OpenAI-compatible router.
@@ -84,32 +84,32 @@ Both benchmarks were scored with their **official scoring code and official judg
   <img alt="BEAM-1M by ability, read-time search vs RAG with full 32K context, same model. Largest gaps: flagging contradictions 0.74 vs 0.35, using the latest value 0.76 vs 0.49, date reasoning 0.55 vs 0.33" src="assets/beam_by_ability_light.png">
 </picture>
 
-| Ability | Read-time search | RAG, full 32K | RAG, paper setup (top 5) |
-| --- | --- | --- | --- |
-| contradiction_resolution | **0.743** | 0.354 | 0.346 |
-| knowledge_update | **0.764** | 0.486 | 0.457 |
-| temporal_reasoning | **0.552** | 0.331 | 0.200 |
-| instruction_following | **0.921** | 0.716 | 0.683 |
-| multi_session_reasoning | **0.756** | 0.589 | 0.452 |
-| information_extraction | **0.905** | 0.752 | 0.619 |
-| event_ordering (Kendall tau, normalised) | **0.340** | 0.228 | 0.202 |
-| abstention | **0.857** | 0.750 | 0.800 |
-| preference_following | **0.913** | 0.838 | 0.770 |
-| summarization | **0.709** | 0.641 | 0.437 |
-| **Average of the 10 abilities** | **0.746** | 0.568 | 0.497 |
+| Ability | Read-time search | mem0 platform (GPT-5) | RAG, full 32K | RAG, paper setup (top 5) |
+| --- | --- | --- | --- | --- |
+| contradiction_resolution | **0.743** | 0.246 | 0.354 | 0.346 |
+| information_extraction | **0.905** | 0.692 | 0.752 | 0.619 |
+| knowledge_update | **0.764** | 0.629 | 0.486 | 0.457 |
+| temporal_reasoning | **0.552** | 0.431 | 0.331 | 0.200 |
+| event_ordering (Kendall tau, normalised) | **0.340** | 0.241 | 0.228 | 0.202 |
+| multi_session_reasoning | **0.756** | 0.681 | 0.589 | 0.452 |
+| instruction_following | **0.921** | 0.869 | 0.716 | 0.683 |
+| abstention | **0.857** | 0.836 | 0.750 | 0.800 |
+| preference_following | **0.913** | 0.921 | 0.838 | 0.770 |
+| summarization | **0.709** | 0.771 | 0.641 | 0.437 |
+| **Average of the 10 abilities** | **0.746** | 0.632 | 0.568 | 0.497 |
 
-All three are answered by GLM-5.3-flash and scored on the same 699 questions with the official BEAM code and judge. Sorted by the size of the gap.
+All four are scored on the same 699 questions with the official BEAM code and judge. Read-time search and both RAG runs are answered by GLM-5.3-flash. The mem0 column is mem0's own published answers from its managed platform, answered by GPT-5 ([mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks), Apache-2.0), unchanged. mem0 wins summarizing and ties preferences; the largest gap is flagging contradictions (0.74 vs 0.25). Sorted by the gap to mem0.
 
 ### What write-time memory systems report
 
-These are each system's own published numbers on its own models and setup. They are context, not a controlled comparison. A controlled head-to-head with mem0 is in progress.
+These are each system's own published numbers on its own models and setup, so they are context rather than a controlled comparison. The one exception is mem0 on BEAM-1M: mem0 published its answers, so we re-scored them with the same official grader as ours. A same-model head-to-head with mem0 is in progress.
 
 | System | Approach | Benchmark | Their reported score | Read-time search (official scoring) |
 | --- | --- | --- | --- | --- |
 | Zep | Temporal knowledge graph | LongMemEval-S | 71.2% | 94.6% |
 | Supermemory | Write-time memory layer | LongMemEval-S | 85.2% (end to end) | 94.6% |
 | mem0 | Fact extraction, optional graph | LongMemEval-S | 94.4% | 94.6% |
-| mem0 | Fact extraction, optional graph | BEAM-1M | 64.1% | 0.746 |
+| mem0 | Fact extraction, optional graph | BEAM-1M | 64.1% (GPT-5 judge, own rubric code). **0.632 when its published answers are re-scored with the official BEAM grader** | 0.746 |
 | LIGHT (BEAM paper) | Episodic memory, working memory, scratchpad | BEAM-1M | 0.336 (older backbones) | 0.746 |
 
 ### LongMemEval-S by question type (official scoring)
@@ -134,7 +134,8 @@ Run `python3 summarize.py` to recompute every number above from the verdict file
 
 ## Honest caveats
 
-- **What the controlled comparison does and doesn't show.** It compares read-time search with RAG using the same model, so it measures *how relevance is judged*: an iterative search-and-read loop against one similarity lookup. It is not a head-to-head with extraction-based memory products. We did not run mem0, Zep or Supermemory ourselves. mem0 self-reports 64.1% on BEAM-1M on its own setup.
+- **What the comparisons do and don't show.** The RAG comparison uses the same model, so it measures *how relevance is judged*: an iterative search-and-read loop against one similarity lookup. The mem0 comparison uses the same questions and the same official grader, but mem0's answers came from its managed platform with GPT-5 answering, a much stronger model than ours. That favours mem0, but it is not a same-model comparison. We did not run mem0 ourselves, or Zep or Supermemory at all.
+- **Token budget.** mem0 answers from about 7K tokens of retrieved memories per question. Read-time search reads about 103K prompt tokens per question on BEAM (74% served from cache). The accuracy gap comes with a cost and latency gap in the other direction.
 - **The RAG is the paper's setup, not a tuned production stack.** bge-small embeddings, top-k retrieval, no reranker and no hybrid keyword search, plus a variant given the full 32K context. A stronger retriever would likely close part of the gap.
 
 - **Single run.** All results come from one run with one answering model, with no seeds and no repeats.
@@ -167,6 +168,8 @@ baselines/
   beam_rag_index.py     builds the paper-style RAG index (turn pairs, bge-small-en-v1.5)
   beam_rag_answer.py    paper's RAG setup, answered by the same model as the harness
 results/beam_1m/rag_same_model/   RAG answers and official verdicts (top 5, and full 32K context)
+results/beam_1m/mem0_platform/    official verdicts for mem0's own published answers
+baselines/mem0_published_answers.py   converts mem0's published BEAM answers for the official grader
 summarize.py            recomputes all tables from results/
 assets/                 charts and diagram (light and dark); make_charts.py and make_diagram.py redraw them
 ```

@@ -18,6 +18,11 @@ print(f"\nBEAM-1M, official scoring (GPT-4.1-mini judge; event ordering = Kendal
 for k, v in sorted(by.items(), key=lambda kv: -mean(kv[1])): print(f'  {k:28s} {mean(v):.3f}  n={len(v)}')
 
 keys = {x['key'] for x in beam}
+mb = collections.defaultdict(list)
+for l in open(R + 'beam_1m/mem0_platform/mem0_platform_official_verdicts_gpt-4.1-mini.jsonl'):
+    x = json.loads(l)
+    if x['key'] in keys: mb[x['ability']].append(x['score'])
+print(f"BEAM-1M, mem0's own published answers (platform, GPT-5), official grader: {mean([mean(v) for v in mb.values()]):.3f} (same {len(keys)} questions)")
 for name, f in [('RAG, full 32K context', 'rag_full32k'), ('RAG, paper setup (top 5)', 'rag_top5')]:
     rb = collections.defaultdict(list)
     for l in open(R + f'beam_1m/rag_same_model/{f}_official_verdicts_gpt-4.1-mini.jsonl'):
