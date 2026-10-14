@@ -11,6 +11,11 @@ This repo tests the opposite approach, **read-time memory**:
 
 There is no extraction, no embeddings and no vector database.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/beam_vs_paper_dark.png">
+  <img alt="BEAM-1M average score: long-context model 0.26, RAG 0.31, LIGHT 0.34 (best in the BEAM paper), read-time search 0.746" src="assets/beam_vs_paper_light.png">
+</picture>
+
 ## Results
 
 Both benchmarks were scored with their **official scoring code and official judge models**.
@@ -24,6 +29,11 @@ Both benchmarks were scored with their **official scoring code and official judg
 - **Cost:** about $0.003 per question on LongMemEval and about $0.01 per question on BEAM-1M.
 
 ### BEAM-1M by ability (official scoring)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/beam_by_ability_dark.png">
+  <img alt="BEAM-1M score by memory ability, from 0.92 for following standing instructions down to 0.34 for ordering events" src="assets/beam_by_ability_light.png">
+</picture>
 
 | Ability | Score |
 | --- | --- |
@@ -40,6 +50,11 @@ Both benchmarks were scored with their **official scoring code and official judg
 | **Average of the 10 abilities** | **0.746** |
 
 ### LongMemEval-S by question type (official scoring)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/longmemeval_dark.png">
+  <img alt="LongMemEval-S accuracy: full context GPT-4o 60.2%, Zep 71.2%, Supermemory 85.2%, mem0 94.4% (vendor figures self-reported), read-time search 94.6%" src="assets/longmemeval_light.png">
+</picture>
 
 | Type | n | Accuracy |
 | --- | --- | --- |
@@ -58,6 +73,7 @@ Run `python3 summarize.py` to recompute every number above from the verdict file
 
 - **Single run.** All results come from one run with one answering model, with no seeds and no repeats.
 - **Vendor figures are self-reported** on their own models and harnesses, so this is not a controlled head-to-head with any memory product. The BEAM paper baselines do share the same scoring code and judge model as ours.
+- **Newer answering model than the paper's baselines.** The BEAM paper's baselines used the backbones of the time: Qwen 2.5, Llama 4 Maverick, Gemini 2 Flash and GPT-4.1-nano. GLM-5.3-flash is newer. Part of the gap may come from the model, not the method, and we have not run the paper's long-context or RAG baselines with GLM-5.3-flash.
 - **Event ordering is the weak spot.** Our answers score 0.75 on BEAM's rubric judge for this ability, but 0.34 on the official Kendall-tau metric. That metric splits the answer on newlines and aligns it line by line with the reference, so formatting matters. The F1 of that alignment is 0.16.
 - **Temporal reasoning (0.55 on BEAM)** is the other clear gap.
 - **Read-time search is slower** than a single vector lookup: about 3 model steps per question on LongMemEval and about 7 on BEAM-1M.
@@ -82,6 +98,7 @@ results/
   beam_1m/official_verdicts_gpt-4.1-mini.jsonl             every rubric verdict with the judge's reasons
   beam_1m/crosscheck_verdicts_claude.json
 summarize.py            recomputes all tables from results/
+assets/                 charts (light and dark) and make_charts.py, which redraws them from results/
 ```
 
 ## How the harness works
