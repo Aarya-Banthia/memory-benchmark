@@ -100,6 +100,18 @@ Both benchmarks were scored with their **official scoring code and official judg
 
 All three are answered by GLM-5.3-flash and scored on the same 699 questions with the official BEAM code and judge. Sorted by the size of the gap.
 
+### What write-time memory systems report
+
+These are each system's own published numbers on its own models and setup. They are context, not a controlled comparison. A controlled head-to-head with mem0 is in progress.
+
+| System | Approach | Benchmark | Their reported score | Read-time search (official scoring) |
+| --- | --- | --- | --- | --- |
+| Zep | Temporal knowledge graph | LongMemEval-S | 71.2% | 94.6% |
+| Supermemory | Write-time memory layer | LongMemEval-S | 85.2% (end to end) | 94.6% |
+| mem0 | Fact extraction, optional graph | LongMemEval-S | 94.4% | 94.6% |
+| mem0 | Fact extraction, optional graph | BEAM-1M | 64.1% | 0.746 |
+| LIGHT (BEAM paper) | Episodic memory, working memory, scratchpad | BEAM-1M | 0.336 (older backbones) | 0.746 |
+
 ### LongMemEval-S by question type (official scoring)
 
 <picture>
