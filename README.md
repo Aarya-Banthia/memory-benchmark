@@ -25,7 +25,11 @@ That design rests on an assumption that cannot hold: **that you can tell what wi
 
 Relevance is not a property of a piece of information. It is a relationship between information and a question. At write time, the question does not exist yet. So the extractor is forced to guess, once, permanently, on behalf of every question anyone will ever ask. Whatever it guesses wrong is gone.
 
-Read-time memory moves the decision to the only moment it can be made well: **when the question arrives**. Keep the raw history. When a question comes in, let a model search the original words with the question in hand, then check its answer against what it found.
+Read-time memory moves the decision to the only moment it can be made well: **when the question arrives**. Keep the raw history. When a question comes in, let a model search the original words with the question in hand, read what comes back, search again with what it learned, then check its answer against what it found.
+
+Plain RAG is a half-step. It keeps the raw text, but it fixes the representation at write time (chunk boundaries, one embedding per chunk) and judges relevance once, by similarity to the question. Read-time search judges relevance the way a person would: by reading.
+
+This is not a new idea in general. Coding agents already grep a repository instead of querying a vector index. What this repo adds is a measurement of it for long-term conversational memory, on public benchmarks, with official scoring.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/why_dark.svg">
@@ -117,6 +121,9 @@ All three are answered by GLM-5.3-flash and scored on the same 699 questions wit
 Run `python3 summarize.py` to recompute every number above from the verdict files. It makes no API calls.
 
 ## Honest caveats
+
+- **What the controlled comparison does and doesn't show.** It compares read-time search with RAG using the same model, so it measures *how relevance is judged*: an iterative search-and-read loop against one similarity lookup. It is not a head-to-head with extraction-based memory products. We did not run mem0, Zep or Supermemory ourselves. mem0 self-reports 64.1% on BEAM-1M on its own setup.
+- **The RAG is the paper's setup, not a tuned production stack.** bge-small embeddings, top-k retrieval, no reranker and no hybrid keyword search, plus a variant given the full 32K context. A stronger retriever would likely close part of the gap.
 
 - **Single run.** All results come from one run with one answering model, with no seeds and no repeats.
 - **Vendor figures are self-reported** on their own models and harnesses, so this is not a controlled head-to-head with any memory product. The BEAM paper baselines do share the same scoring code and judge model as ours.
