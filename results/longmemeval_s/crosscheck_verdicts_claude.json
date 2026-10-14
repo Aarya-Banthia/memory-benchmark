@@ -1,0 +1,1654 @@
+{
+ "e47becba": {
+  "correct": true
+ },
+ "58bf7951": {
+  "correct": true
+ },
+ "118b2229": {
+  "correct": true
+ },
+ "726462e0": {
+  "correct": true
+ },
+ "58ef2f1c": {
+  "correct": true
+ },
+ "75499fd8": {
+  "correct": true
+ },
+ "c8c3f81d": {
+  "correct": true
+ },
+ "a06e4cfe": {
+  "correct": true
+ },
+ "caf9ead2": {
+  "correct": true
+ },
+ "577d4d32": {
+  "correct": true
+ },
+ "b320f3f8": {
+  "correct": true
+ },
+ "15745da0": {
+  "correct": true
+ },
+ "8e9d538c": {
+  "correct": true
+ },
+ "311778f1": {
+  "correct": true
+ },
+ "1faac195": {
+  "correct": true
+ },
+ "3d86fd0a": {
+  "correct": true
+ },
+ "15745da0_abs": {
+  "correct": true
+ },
+ "29f2956b_abs": {
+  "correct": true
+ },
+ "gpt4_59c863d7": {
+  "correct": true
+ },
+ "aae3761f": {
+  "correct": true
+ },
+ "46a3abf7": {
+  "correct": false,
+  "note": "says 2 tanks, answer 3"
+ },
+ "2e6d26dc": {
+  "correct": true
+ },
+ "gpt4_2f8be40d": {
+  "correct": true
+ },
+ "gpt4_7fce9456": {
+  "correct": true
+ },
+ "b3c15d39": {
+  "correct": true
+ },
+ "00ca467f": {
+  "correct": true
+ },
+ "60bf93ed": {
+  "correct": true
+ },
+ "gpt4_194be4b3": {
+  "correct": true
+ },
+ "edced276": {
+  "correct": true
+ },
+ "2b8f3739": {
+  "correct": true
+ },
+ "1a8a66a6": {
+  "correct": true
+ },
+ "81507db6": {
+  "correct": true
+ },
+ "gpt4_731e37d7": {
+  "correct": false,
+  "note": "hedges between $220 and $720, leans $220"
+ },
+ "0edc2aef": {
+  "correct": true
+ },
+ "54026fce": {
+  "correct": true
+ },
+ "caf03d32": {
+  "correct": true
+ },
+ "57f827a0": {
+  "correct": true
+ },
+ "6b7dfb22": {
+  "correct": true
+ },
+ "75f70248": {
+  "correct": true
+ },
+ "1da05512": {
+  "correct": true
+ },
+ "2311e44b": {
+  "correct": true
+ },
+ "cc06de0d": {
+  "correct": true
+ },
+ "a11281a2": {
+  "correct": true
+ },
+ "6456829e": {
+  "correct": true
+ },
+ "e25c3b8d": {
+  "correct": true
+ },
+ "7405e8b1": {
+  "correct": true
+ },
+ "ef66a6e5": {
+  "correct": true
+ },
+ "8979f9ec": {
+  "correct": true
+ },
+ "3fdac837": {
+  "correct": true
+ },
+ "1c549ce4": {
+  "correct": true
+ },
+ "92a0aa75": {
+  "correct": true
+ },
+ "ef9cf60a": {
+  "correct": true
+ },
+ "bc149d6b": {
+  "correct": true
+ },
+ "f0e564bc": {
+  "correct": true
+ },
+ "8cf4d046": {
+  "correct": true
+ },
+ "c18a7dc8": {
+  "correct": false,
+  "note": "failed to compute 7"
+ },
+ "8e91e7d9": {
+  "correct": true
+ },
+ "gpt4_59149c77": {
+  "correct": true
+ },
+ "gpt4_f49edff3": {
+  "correct": true
+ },
+ "09ba9854_abs": {
+  "correct": false,
+  "note": "answered instead of abstaining"
+ },
+ "gpt4_e072b769": {
+  "correct": true
+ },
+ "gpt4_1d80365e": {
+  "correct": true
+ },
+ "gpt4_6dc9b45b": {
+  "correct": true
+ },
+ "gpt4_7a0daae1": {
+  "correct": true
+ },
+ "2ebe6c90": {
+  "correct": true
+ },
+ "370a8ff4": {
+  "correct": false,
+  "note": "11.5 weeks vs 15"
+ },
+ "gpt4_45189cb4": {
+  "correct": true
+ },
+ "gpt4_8e165409": {
+  "correct": true
+ },
+ "gpt4_98f46fc6": {
+  "correct": true
+ },
+ "gpt4_85da3956": {
+  "correct": true
+ },
+ "gpt4_68e94287": {
+  "correct": true
+ },
+ "2ebe6c92": {
+  "correct": true
+ },
+ "71017277": {
+  "correct": false,
+  "note": "said no jewelry record; did not answer aunt"
+ },
+ "gpt4_f420262c": {
+  "correct": true
+ },
+ "4dfccbf8": {
+  "correct": true
+ },
+ "eac54add": {
+  "correct": false,
+  "note": "influencer collab instead of first client contract"
+ },
+ "gpt4_2312f94c": {
+  "correct": true
+ },
+ "0bb5a684": {
+  "correct": true
+ },
+ "gpt4_385a5000": {
+  "correct": true
+ },
+ "gpt4_6ed717ea": {
+  "correct": true
+ },
+ "gpt4_2d58bcd6": {
+  "correct": true
+ },
+ "gpt4_65aabe59": {
+  "correct": true
+ },
+ "dcfa8644": {
+  "correct": true
+ },
+ "982b5123": {
+  "correct": false,
+  "note": "did not answer five months"
+ },
+ "gpt4_b4a80587": {
+  "correct": true
+ },
+ "gpt4_d31cdae3": {
+  "correct": true
+ },
+ "gpt4_88806d6e": {
+  "correct": true
+ },
+ "b29f3365": {
+  "correct": true
+ },
+ "gpt4_2f56ae70": {
+  "correct": true
+ },
+ "gpt4_c27434e8": {
+  "correct": true
+ },
+ "6a1eabeb": {
+  "correct": true
+ },
+ "982b5123_abs": {
+  "correct": true
+ },
+ "gpt4_fe651585_abs": {
+  "correct": true
+ },
+ "ce6d2d27": {
+  "correct": true
+ },
+ "184da446": {
+  "correct": true
+ },
+ "031748ae": {
+  "correct": true
+ },
+ "41698283": {
+  "correct": true
+ },
+ "5a4f22c0": {
+  "correct": true
+ },
+ "6a27ffc2": {
+  "correct": true
+ },
+ "ed4ddc30": {
+  "correct": true
+ },
+ "1cea1afa": {
+  "correct": true
+ },
+ "7e974930": {
+  "correct": true
+ },
+ "603deb26": {
+  "correct": true
+ },
+ "50635ada": {
+  "correct": true
+ },
+ "dfde3500": {
+  "correct": true
+ },
+ "e66b632c": {
+  "correct": true
+ },
+ "06db6396": {
+  "correct": true
+ },
+ "ba61f0b9": {
+  "correct": true
+ },
+ "5c40ec5b": {
+  "correct": true
+ },
+ "6aeb4375_abs": {
+  "correct": true
+ },
+ "0ddfec37_abs": {
+  "correct": true
+ },
+ "89941a94": {
+  "correct": true
+ },
+ "6ae235be": {
+  "correct": true
+ },
+ "f523d9fe": {
+  "correct": true
+ },
+ "fea54f57": {
+  "correct": true
+ },
+ "1d4da289": {
+  "correct": true
+ },
+ "71a3fd6b": {
+  "correct": true
+ },
+ "2bf43736": {
+  "correct": true
+ },
+ "3249768e": {
+  "correct": true
+ },
+ "e3fc4d6e": {
+  "correct": true
+ },
+ "a40e080f": {
+  "correct": true
+ },
+ "4388e9dd": {
+  "correct": true
+ },
+ "b759caee": {
+  "correct": true
+ },
+ "c8f1aeed": {
+  "correct": true
+ },
+ "778164c6": {
+  "correct": true
+ },
+ "1e043500": {
+  "correct": true,
+  "note": ""
+ },
+ "6ade9755": {
+  "correct": true,
+  "note": ""
+ },
+ "5d3d2817": {
+  "correct": true,
+  "note": ""
+ },
+ "51a45a95": {
+  "correct": true,
+  "note": ""
+ },
+ "af8d2e46": {
+  "correct": true,
+  "note": ""
+ },
+ "8ebdbe50": {
+  "correct": true,
+  "note": ""
+ },
+ "95bcc1c8": {
+  "correct": true,
+  "note": ""
+ },
+ "37d43f65": {
+  "correct": true,
+  "note": ""
+ },
+ "60d45044": {
+  "correct": true,
+  "note": ""
+ },
+ "8550ddae": {
+  "correct": true,
+  "note": ""
+ },
+ "bc8a6e93": {
+  "correct": true,
+  "note": ""
+ },
+ "ec81a493": {
+  "correct": true,
+  "note": ""
+ },
+ "8a137a7f": {
+  "correct": true,
+  "note": ""
+ },
+ "c19f7a0b": {
+  "correct": true,
+  "note": ""
+ },
+ "f4f1d8a4": {
+  "correct": true,
+  "note": ""
+ },
+ "36580ce8": {
+  "correct": true,
+  "note": ""
+ },
+ "4100d0a0": {
+  "correct": true,
+  "note": ""
+ },
+ "0862e8bf_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_f2262a51": {
+  "correct": true,
+  "note": ""
+ },
+ "6cb6f249": {
+  "correct": true,
+  "note": ""
+ },
+ "36b9f61e": {
+  "correct": true,
+  "note": ""
+ },
+ "28dc39ac": {
+  "correct": true,
+  "note": ""
+ },
+ "d682f1a2": {
+  "correct": true,
+  "note": ""
+ },
+ "88432d0a": {
+  "correct": false,
+  "note": "says 5 bakes, answer 4"
+ },
+ "gpt4_d12ceb0e": {
+  "correct": true,
+  "note": ""
+ },
+ "2ce6a0f2": {
+  "correct": true,
+  "note": ""
+ },
+ "129d1232": {
+  "correct": true,
+  "note": ""
+ },
+ "d851d5ba": {
+  "correct": false,
+  "note": "says 8750, answer 3750"
+ },
+ "9d25d4e0": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_e05b82a6": {
+  "correct": true,
+  "note": ""
+ },
+ "e3038f8c": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_2f91af09": {
+  "correct": true,
+  "note": ""
+ },
+ "60bf93ed_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_372c3eed_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "32260d93": {
+  "correct": false,
+  "note": "main pick true crime, not Netflix stand-up"
+ },
+ "06f04340": {
+  "correct": true,
+  "note": ""
+ },
+ "38146c39": {
+  "correct": true,
+  "note": ""
+ },
+ "d24813b1": {
+  "correct": true,
+  "note": ""
+ },
+ "d6233ab6": {
+  "correct": true,
+  "note": ""
+ },
+ "b0479f84": {
+  "correct": true,
+  "note": ""
+ },
+ "d3ab962e": {
+  "correct": true,
+  "note": ""
+ },
+ "1f2b8d4f": {
+  "correct": true,
+  "note": ""
+ },
+ "a4996e51": {
+  "correct": true,
+  "note": ""
+ },
+ "d905b33f": {
+  "correct": true,
+  "note": ""
+ },
+ "60036106": {
+  "correct": true,
+  "note": ""
+ },
+ "4adc0475": {
+  "correct": true,
+  "note": ""
+ },
+ "27016adc": {
+  "correct": true,
+  "note": ""
+ },
+ "77eafa52": {
+  "correct": true,
+  "note": ""
+ },
+ "a96c20ee": {
+  "correct": true,
+  "note": ""
+ },
+ "1192316e": {
+  "correct": true,
+  "note": ""
+ },
+ "ba358f49": {
+  "correct": true,
+  "note": ""
+ },
+ "6c49646a": {
+  "correct": true,
+  "note": ""
+ },
+ "d6062bb9": {
+  "correct": true,
+  "note": ""
+ },
+ "73d42213": {
+  "correct": true,
+  "note": ""
+ },
+ "a346bb18": {
+  "correct": true,
+  "note": ""
+ },
+ "efc3f7c2": {
+  "correct": true,
+  "note": ""
+ },
+ "21d02d0d": {
+  "correct": true,
+  "note": ""
+ },
+ "6456829e_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "af082822": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_4929293a": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_1d4ab0c9": {
+  "correct": true,
+  "note": ""
+ },
+ "0db4c65d": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_18c2b244": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_a1b77f9c": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_4fc4f797": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_4ef30696": {
+  "correct": true,
+  "note": ""
+ },
+ "8077ef71": {
+  "correct": true,
+  "note": ""
+ },
+ "bcbe585f": {
+  "correct": true,
+  "note": ""
+ },
+ "5e1b23de": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_7ddcf75f": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_e414231e": {
+  "correct": true,
+  "note": ""
+ },
+ "b46e15ee": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_7ca326fa": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_e414231f": {
+  "correct": true,
+  "note": ""
+ },
+ "6e984302": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_b5700ca0": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_59149c78": {
+  "correct": false,
+  "note": "hedges, prefers farm stay over Met"
+ },
+ "2c63a862": {
+  "correct": true,
+  "note": ""
+ },
+ "08f4fc43": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_70e84552": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_93159ced": {
+  "correct": true,
+  "note": ""
+ },
+ "a3838d2b": {
+  "correct": false,
+  "note": "says 3, answer 4"
+ },
+ "gpt4_4edbafa2": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_8c8961ae": {
+  "correct": true,
+  "note": ""
+ },
+ "e4e14d04": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_9a159967": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_cd90e484": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_78cf46a3": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_5438fa52": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_0a05b494": {
+  "correct": true,
+  "note": ""
+ },
+ "c8090214_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "gpt4_93159ced_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "830ce83f": {
+  "correct": true,
+  "note": ""
+ },
+ "89941a93": {
+  "correct": true,
+  "note": ""
+ },
+ "a1eacc2a": {
+  "correct": true,
+  "note": ""
+ },
+ "2698e78f": {
+  "correct": true,
+  "note": ""
+ },
+ "45dc21b6": {
+  "correct": true,
+  "note": ""
+ },
+ "72e3ee87": {
+  "correct": true,
+  "note": ""
+ },
+ "01493427": {
+  "correct": true,
+  "note": ""
+ },
+ "7a87bd0c": {
+  "correct": true,
+  "note": ""
+ },
+ "618f13b2": {
+  "correct": false,
+  "note": "says 4, answer six"
+ },
+ "b01defab": {
+  "correct": true,
+  "note": ""
+ },
+ "5831f84d": {
+  "correct": true,
+  "note": ""
+ },
+ "eace081b": {
+  "correct": true,
+  "note": ""
+ },
+ "f685340e": {
+  "correct": true,
+  "note": ""
+ },
+ "cf22b7bf": {
+  "correct": true,
+  "note": ""
+ },
+ "c7dc5443": {
+  "correct": true,
+  "note": ""
+ },
+ "dad224aa": {
+  "correct": true,
+  "note": ""
+ },
+ "c6853660": {
+  "correct": true,
+  "note": ""
+ },
+ "031748ae_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "f685340e_abs": {
+  "correct": true,
+  "note": ""
+ },
+ "7161e7e2": {
+  "correct": true,
+  "note": ""
+ },
+ "7e00a6cb": {
+  "correct": true,
+  "note": ""
+ },
+ "0e5e2d1a": {
+  "correct": true,
+  "note": ""
+ },
+ "18dcd5a5": {
+  "correct": true,
+  "note": ""
+ },
+ "cc539528": {
+  "correct": true,
+  "note": ""
+ },
+ "8aef76bc": {
+  "correct": true,
+  "note": ""
+ },
+ "1b9b7252": {
+  "correct": true,
+  "note": ""
+ },
+ "3e321797": {
+  "correct": true,
+  "note": ""
+ },
+ "352ab8bd": {
+  "correct": true,
+  "note": ""
+ },
+ "fca762bc": {
+  "correct": true,
+  "note": ""
+ },
+ "7a8d0b71": {
+  "correct": true,
+  "note": ""
+ },
+ "561fabcd": {
+  "correct": true,
+  "note": ""
+ },
+ "c7cf7dfd": {
+  "correct": true,
+  "note": ""
+ },
+ "e48988bc": {
+  "correct": true,
+  "note": ""
+ },
+ "c5e8278d": {
+  "correct": true
+ },
+ "f8c5f88b": {
+  "correct": true
+ },
+ "3b6f954b": {
+  "correct": true
+ },
+ "66f24dbb": {
+  "correct": true
+ },
+ "ad7109d1": {
+  "correct": true
+ },
+ "6b168ec8": {
+  "correct": true
+ },
+ "0862e8bf": {
+  "correct": true
+ },
+ "d52b4f67": {
+  "correct": true
+ },
+ "86b68151": {
+  "correct": true
+ },
+ "e01b8e2f": {
+  "correct": true
+ },
+ "b86304ba": {
+  "correct": true
+ },
+ "4fd1909e": {
+  "correct": true
+ },
+ "76d63226": {
+  "correct": true
+ },
+ "faba32e5": {
+  "correct": true
+ },
+ "29f2956b": {
+  "correct": true
+ },
+ "a82c026e": {
+  "correct": true
+ },
+ "f4f1d8a4_abs": {
+  "correct": true
+ },
+ "e831120c": {
+  "correct": true
+ },
+ "gpt4_d84a3211": {
+  "correct": true
+ },
+ "gpt4_a56e767c": {
+  "correct": true
+ },
+ "6d550036": {
+  "correct": false,
+  "note": "says 4 projects, expected 2"
+ },
+ "dd2973ad": {
+  "correct": false,
+  "note": "says undeterminable, expected 2 AM"
+ },
+ "gpt4_15e38248": {
+  "correct": true
+ },
+ "gpt4_5501fe77": {
+  "correct": true
+ },
+ "7024f17c": {
+  "correct": false,
+  "note": "says 0 hours, expected 0.5"
+ },
+ "eeda8a6d": {
+  "correct": true
+ },
+ "60472f9c": {
+  "correct": true
+ },
+ "5a7937c8": {
+  "correct": true
+ },
+ "10d9b85a": {
+  "correct": true
+ },
+ "c2ac3c61": {
+  "correct": true
+ },
+ "bf659f65": {
+  "correct": false,
+  "note": "says 2, expected 3"
+ },
+ "80ec1f4f_abs": {
+  "correct": true
+ },
+ "8a2466db": {
+  "correct": true
+ },
+ "06878be2": {
+  "correct": true
+ },
+ "195a1a1b": {
+  "correct": true
+ },
+ "75832dbd": {
+  "correct": true
+ },
+ "1a1907b4": {
+  "correct": true
+ },
+ "505af2f5": {
+  "correct": true
+ },
+ "b6025781": {
+  "correct": true
+ },
+ "1d4e3b97": {
+  "correct": true
+ },
+ "1c0ddc50": {
+  "correct": true
+ },
+ "85fa3a3f": {
+  "correct": true
+ },
+ "51c32626": {
+  "correct": true
+ },
+ "9aaed6a3": {
+  "correct": true
+ },
+ "681a1674": {
+  "correct": true
+ },
+ "5025383b": {
+  "correct": true
+ },
+ "91b15a6e": {
+  "correct": true
+ },
+ "0100672e": {
+  "correct": true
+ },
+ "3fe836c9": {
+  "correct": true
+ },
+ "bb7c3b45": {
+  "correct": true
+ },
+ "61f8c8f8": {
+  "correct": true
+ },
+ "099778bb": {
+  "correct": true
+ },
+ "a3332713": {
+  "correct": true
+ },
+ "157a136e": {
+  "correct": false,
+  "note": "no exact answer, expected 43"
+ },
+ "a08a253f": {
+  "correct": true
+ },
+ "09ba9854": {
+  "correct": false,
+  "note": "gives ranges, not $50"
+ },
+ "87f22b4a": {
+  "correct": true
+ },
+ "e5ba910e_abs": {
+  "correct": true
+ },
+ "gpt4_fa19884c": {
+  "correct": true
+ },
+ "b46e15ed": {
+  "correct": true
+ },
+ "0bc8ad92": {
+  "correct": true
+ },
+ "9a707b81": {
+  "correct": false,
+  "note": "says 26 days, expected 21"
+ },
+ "gpt4_1916e0ea": {
+  "correct": true
+ },
+ "gpt4_1e4a8aeb": {
+  "correct": true
+ },
+ "gpt4_61e13b3c": {
+  "correct": true
+ },
+ "gpt4_7f6b06db": {
+  "correct": true
+ },
+ "gpt4_ec93e27f": {
+  "correct": true
+ },
+ "gpt4_74aed68e": {
+  "correct": true
+ },
+ "gpt4_af6db32f": {
+  "correct": true
+ },
+ "eac54adc": {
+  "correct": true
+ },
+ "gpt4_7bc6cf22": {
+  "correct": true
+ },
+ "gpt4_1e4a8aec": {
+  "correct": true
+ },
+ "gpt4_f420262d": {
+  "correct": true
+ },
+ "gpt4_4929293b": {
+  "correct": true
+ },
+ "gpt4_8279ba03": {
+  "correct": true
+ },
+ "0bc8ad93": {
+  "correct": true
+ },
+ "gpt4_2655b836": {
+  "correct": true
+ },
+ "bbf86515": {
+  "correct": true
+ },
+ "2a1811e2": {
+  "correct": true
+ },
+ "gpt4_0b2f1d21": {
+  "correct": true
+ },
+ "6e984301": {
+  "correct": false,
+  "note": "says 9 weeks, expected 3"
+ },
+ "c8090214": {
+  "correct": true
+ },
+ "gpt4_2c50253f": {
+  "correct": true
+ },
+ "cc6d1ec1": {
+  "correct": true
+ },
+ "a3045048": {
+  "correct": true
+ },
+ "gpt4_7de946e7": {
+  "correct": true
+ },
+ "gpt4_93f6379c": {
+  "correct": true
+ },
+ "6613b389": {
+  "correct": true
+ },
+ "gpt4_2f584639": {
+  "correct": true
+ },
+ "gpt4_213fd887": {
+  "correct": true
+ },
+ "gpt4_70e84552_abs": {
+  "correct": true
+ },
+ "gpt4_c27434e8_abs": {
+  "correct": true
+ },
+ "852ce960": {
+  "correct": false,
+  "note": "gives old $350,000, expected updated $400,000"
+ },
+ "71315a70": {
+  "correct": true
+ },
+ "0f05491a": {
+  "correct": true
+ },
+ "4d6b87c8": {
+  "correct": true
+ },
+ "e493bb7c": {
+  "correct": true
+ },
+ "9ea5eabc": {
+  "correct": true
+ },
+ "18bc8abd": {
+  "correct": true
+ },
+ "e61a7584": {
+  "correct": true
+ },
+ "0e4e4c46": {
+  "correct": true
+ },
+ "22d2cb42": {
+  "correct": true
+ },
+ "4b24c848": {
+  "correct": true
+ },
+ "0ddfec37": {
+  "correct": true
+ },
+ "affe2881": {
+  "correct": true
+ },
+ "69fee5aa": {
+  "correct": true
+ },
+ "10e09553": {
+  "correct": true
+ },
+ "42ec0761": {
+  "correct": true
+ },
+ "26bdc477": {
+  "correct": true
+ },
+ "07741c45": {
+  "correct": true
+ },
+ "c4f10528": {
+  "correct": true
+ },
+ "4c36ccef": {
+  "correct": true
+ },
+ "1903aded": {
+  "correct": true
+ },
+ "ceb54acb": {
+  "correct": true
+ },
+ "488d3006": {
+  "correct": true
+ },
+ "8464fc84": {
+  "correct": true
+ },
+ "8752c811": {
+  "correct": true
+ },
+ "e8a79c70": {
+  "correct": true
+ },
+ "6222b6eb": {
+  "correct": true
+ },
+ "e982271f": {
+  "correct": true
+ },
+ "8b9d4367": {
+  "correct": true
+ },
+ "16c90bf4": {
+  "correct": true
+ },
+ "ac031881": {
+  "correct": true
+ },
+ "1de5cff2": {
+  "correct": true
+ },
+ "eaca4986": {
+  "correct": true
+ },
+ "6f9b354f": {
+  "correct": true
+ },
+ "7527f7e2": {
+  "correct": true
+ },
+ "c960da58": {
+  "correct": true
+ },
+ "94f70d80": {
+  "correct": true
+ },
+ "dccbc061": {
+  "correct": true
+ },
+ "21436231": {
+  "correct": true
+ },
+ "853b0a1d": {
+  "correct": true
+ },
+ "25e5aa4f": {
+  "correct": true
+ },
+ "3f1e9474": {
+  "correct": true
+ },
+ "ccb36322": {
+  "correct": true
+ },
+ "001be529": {
+  "correct": true
+ },
+ "19b5f2b3": {
+  "correct": true
+ },
+ "545bd2b5": {
+  "correct": true
+ },
+ "86f00804": {
+  "correct": true
+ },
+ "c14c00dd": {
+  "correct": true
+ },
+ "bc8a6e93_abs": {
+  "correct": true
+ },
+ "19b5f2b3_abs": {
+  "correct": true
+ },
+ "b5ef892d": {
+  "correct": true
+ },
+ "0a995998": {
+  "correct": false,
+  "note": "answers 2 items, third only hedged"
+ },
+ "c4a1ceb8": {
+  "correct": true
+ },
+ "3a704032": {
+  "correct": false,
+  "note": "primary answer 2, 3 only as borderline"
+ },
+ "80ec1f4f": {
+  "correct": true
+ },
+ "2318644b": {
+  "correct": true
+ },
+ "d23cf73b": {
+  "correct": false,
+  "note": "answers 5 cuisines, not 4"
+ },
+ "gpt4_2ba83207": {
+  "correct": true
+ },
+ "2788b940": {
+  "correct": true
+ },
+ "gpt4_31ff4165": {
+  "correct": true
+ },
+ "a9f6b44c": {
+  "correct": true
+ },
+ "gpt4_ab202e7f": {
+  "correct": false,
+  "note": "answers 4, expected 5"
+ },
+ "gpt4_372c3eed": {
+  "correct": true
+ },
+ "88432d0a_abs": {
+  "correct": true
+ },
+ "eeda8a6d_abs": {
+  "correct": true
+ },
+ "edced276_abs": {
+  "correct": true
+ },
+ "35a27287": {
+  "correct": true
+ },
+ "afdc33df": {
+  "correct": false,
+  "note": "meta verification text, not an answer"
+ },
+ "95228167": {
+  "correct": true
+ },
+ "09d032c9": {
+  "correct": true
+ },
+ "fca70973": {
+  "correct": false,
+  "note": "meta verification text, not an answer"
+ },
+ "a89d7624": {
+  "correct": true
+ },
+ "07b6f563": {
+  "correct": true
+ },
+ "0a34ad58": {
+  "correct": true
+ },
+ "4f54b7c9": {
+  "correct": true
+ },
+ "f35224e0": {
+  "correct": true
+ },
+ "3c1045c8": {
+  "correct": true
+ },
+ "4bc144e2": {
+  "correct": true
+ },
+ "9ee3ecd6": {
+  "correct": false,
+  "note": "says 300 points, expected 100"
+ },
+ "720133ac": {
+  "correct": true
+ },
+ "a1cc6108": {
+  "correct": true
+ },
+ "e6041065": {
+  "correct": true
+ },
+ "0ea62687": {
+  "correct": true
+ },
+ "67e0d0f2": {
+  "correct": true
+ },
+ "60159905": {
+  "correct": true
+ },
+ "55241a1f": {
+  "correct": true
+ },
+ "078150f1": {
+  "correct": true
+ },
+ "37f165cf": {
+  "correct": false,
+  "note": "claims info not found"
+ },
+ "e56a43b9": {
+  "correct": true
+ },
+ "2311e44b_abs": {
+  "correct": true
+ },
+ "71017276": {
+  "correct": true
+ },
+ "a96c20ee_abs": {
+  "correct": true
+ },
+ "gpt4_b5700ca9": {
+  "correct": true
+ },
+ "ba358f49_abs": {
+  "correct": true
+ },
+ "gpt4_8279ba02": {
+  "correct": true
+ },
+ "gpt4_468eb063": {
+  "correct": true
+ },
+ "4dfccbf7": {
+  "correct": true
+ },
+ "gpt4_e061b84f": {
+  "correct": true
+ },
+ "gpt4_7abb270c": {
+  "correct": false,
+  "note": "wrong order; omits Museum of Contemporary Art placement, adds Modern Art Gallery"
+ },
+ "gpt4_d6585ce8": {
+  "correct": true
+ },
+ "gpt4_21adecb5": {
+  "correct": true
+ },
+ "gpt4_a2d1d1f6": {
+  "correct": true
+ },
+ "gpt4_b0863698": {
+  "correct": true
+ },
+ "gpt4_e061b84g": {
+  "correct": true
+ },
+ "gpt4_d6585ce9": {
+  "correct": true
+ },
+ "gpt4_468eb064": {
+  "correct": true
+ },
+ "9a707b82": {
+  "correct": true
+ },
+ "gpt4_68e94288": {
+  "correct": true
+ },
+ "gpt4_2487a7cb": {
+  "correct": true
+ },
+ "gpt4_76048e76": {
+  "correct": true
+ },
+ "gpt4_fa19884d": {
+  "correct": true
+ },
+ "f0853d11": {
+  "correct": true
+ },
+ "gpt4_5dcc0aab": {
+  "correct": true
+ },
+ "b9cfe692": {
+  "correct": true
+ },
+ "gpt4_483dd43c": {
+  "correct": true
+ },
+ "c9f37c46": {
+  "correct": true
+ },
+ "gpt4_d9af6064": {
+  "correct": true
+ },
+ "d01c6aa8": {
+  "correct": true
+ },
+ "gpt4_4cd9eba1": {
+  "correct": true
+ },
+ "993da5e2": {
+  "correct": true
+ },
+ "gpt4_1a1dc16d": {
+  "correct": true
+ },
+ "8c18457d": {
+  "correct": true
+ },
+ "gpt4_fe651585": {
+  "correct": true
+ },
+ "6aeb4375": {
+  "correct": true
+ },
+ "945e3d21": {
+  "correct": true
+ },
+ "d7c942c3": {
+  "correct": true
+ },
+ "07741c44": {
+  "correct": true
+ },
+ "08e075c7": {
+  "correct": true
+ },
+ "f9e8c073": {
+  "correct": true
+ },
+ "b6019101": {
+  "correct": true
+ },
+ "6071bd76": {
+  "correct": true
+ },
+ "c4ea545c": {
+  "correct": true
+ },
+ "db467c8c": {
+  "correct": true
+ },
+ "8fb83627": {
+  "correct": true
+ },
+ "2133c1b5": {
+  "correct": true
+ },
+ "59524333": {
+  "correct": true
+ },
+ "cc5ded98": {
+  "correct": true
+ },
+ "7401057b": {
+  "correct": true
+ },
+ "a2f3aa27": {
+  "correct": true
+ },
+ "9bbe84a2": {
+  "correct": true
+ },
+ "3ba21379": {
+  "correct": false,
+  "note": "says Mustang model, expected Ford F-150"
+ },
+ "2698e78f_abs": {
+  "correct": true
+ },
+ "0977f2af": {
+  "correct": true
+ },
+ "89527b6b": {
+  "correct": true
+ },
+ "2133c1b5_abs": {
+  "correct": true
+ },
+ "e9327a54": {
+  "correct": true
+ },
+ "dc439ea3": {
+  "correct": true
+ },
+ "8cf51dda": {
+  "correct": true
+ },
+ "58470ed2": {
+  "correct": true
+ },
+ "70b3e69b": {
+  "correct": true
+ },
+ "1568498a": {
+  "correct": true
+ },
+ "d596882b": {
+  "correct": true
+ },
+ "51b23612": {
+  "correct": true
+ },
+ "5809eb10": {
+  "correct": true
+ },
+ "4baee567": {
+  "correct": true
+ },
+ "28bcfaac": {
+  "correct": true
+ },
+ "65240037": {
+  "correct": true
+ },
+ "41275add": {
+  "correct": true
+ }
+}

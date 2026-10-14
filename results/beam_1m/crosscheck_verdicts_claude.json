@@ -1,0 +1,2592 @@
+{
+ "1|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "1|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "1|summarization|0": {
+  "score": 0.5,
+  "note": "missing Google vs DeepL comparison and memory/GPT-4 endpoints; partial on integration, troubleshooting, fallback, advanced caching"
+ },
+ "2|contradiction_resolution|0": {
+  "score": 0.25,
+  "note": "answers yes; does not flag contradiction or ask which is correct"
+ },
+ "2|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "3|abstention|1": {
+  "score": 0,
+  "note": "lists protocols instead of saying info unavailable"
+ },
+ "3|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "3|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "4|abstention|1": {
+  "score": 0.5,
+  "note": "says no explicit rationale but then lists inferred reasons"
+ },
+ "4|preference_following|0": {
+  "score": 0.75,
+  "note": "recommends DistilGPT-2 but also suggests scaling to medium/large"
+ },
+ "5|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "5|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "5|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "6|event_ordering|0": {
+  "score": 0.42,
+  "note": "missing product-rule difficulty and confirmation of understanding; directional/gradient items merged"
+ },
+ "6|multi_session_reasoning|1": {
+  "score": 0.17,
+  "note": "no 18 total; vector field count 8 not 10; 8 partials only as alternative"
+ },
+ "6|summarization|0": {
+  "score": 0.7,
+  "note": "missing 65%->82% homework score; limit vs shortcut only partial"
+ },
+ "7|event_ordering|0": {
+  "score": 0.7,
+  "note": "missing logistic harvesting/steady state; RK4 only partial"
+ },
+ "8|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "8|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "8|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "9|knowledge_update|0": {
+  "score": 1,
+  "note": ""
+ },
+ "9|multi_session_reasoning|0": {
+  "score": 0.33,
+  "note": "gives 59 with 7 books instead of 60 with 8 books"
+ },
+ "10|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "10|information_extraction|1": {
+  "score": 0.88,
+  "note": "assumption that angles were known only implicit"
+ },
+ "11|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "11|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "11|instruction_following|1": {
+  "score": 0.5,
+  "note": "no clear confirmation of who is attending"
+ },
+ "12|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "12|event_ordering|1": {
+  "score": 0.56,
+  "note": "missing colleague collaboration, job options/work-life, EHR/telepsychology, reservations"
+ },
+ "12|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "13|event_ordering|1": {
+  "score": 1,
+  "note": ""
+ },
+ "13|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "14|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "14|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "13|summarization|0": {
+  "score": 0.36,
+  "note": "missing early research/costs, fixer-upper signs, location tradeoff, step-by-step plan; partial on property type"
+ },
+ "15|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "15|preference_following|0": {
+  "score": 0.67,
+  "note": "recommends indoor options like indoor cycling, rowing machine, indoor HIIT"
+ },
+ "16|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "16|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "16|knowledge_update|0": {
+  "score": 1,
+  "note": ""
+ },
+ "16|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "16|summarization|1": {
+  "score": 0.67,
+  "note": "Holter date given as Feb 12 not rescheduled Feb 14; side effects, dose increase and ablation details partial"
+ },
+ "17|preference_following|1": {
+  "score": 0.83,
+  "note": "recommends 18C rather than about 19C"
+ },
+ "18|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "19|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "19|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "18|summarization|0": {
+  "score": 0.88,
+  "note": "community center volunteering and legal/health check-ins only partial"
+ },
+ "19|temporal_reasoning|0": {
+  "score": 0,
+  "note": "says 2 days/unknown instead of 7 days Feb 20 to Feb 27"
+ },
+ "20|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "20|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "21|event_ordering|0": {
+  "score": 0.5,
+  "note": "missing agent/paperwork, market asking price, final profit/contingency; commission out of order"
+ },
+ "21|temporal_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "21|summarization|1": {
+  "score": 0.7,
+  "note": "missing stressor-specific strategies; daily-activity integration partial"
+ },
+ "21|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "22|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "23|knowledge_update|0": {
+  "score": 1,
+  "note": ""
+ },
+ "23|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "24|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "23|multi_session_reasoning|0": {
+  "score": 0.75,
+  "note": "describes pattern as front-loaded rather than consistent monthly distribution"
+ },
+ "25|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "25|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "25|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "26|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "26|temporal_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "26|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "does not commit to $15,000 total; offers it only as one alternative"
+ },
+ "27|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "27|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "28|event_ordering|0": {
+  "score": 0.5,
+  "note": "missing new goals, expo/sponsorship, national championship prep; several items partial or out of order"
+ },
+ "27|preference_following|1": {
+  "score": 0.5,
+  "note": "includes Sunday but no mention of conditions like less traffic or lighting"
+ },
+ "27|summarization|1": {
+  "score": 0.9,
+  "note": "delegation not mentioned"
+ },
+ "29|event_ordering|1": {
+  "score": 0.5,
+  "note": "missing work balance, tournament/commitment balance, equipment maintenance; serve slots and tournament prep partial"
+ },
+ "28|summarization|1": {
+  "score": 0.25,
+  "note": "missing league choice, Karen/Bonnie decision, board membership; others partial"
+ },
+ "30|contradiction_resolution|0": {
+  "score": 0.25,
+  "note": "answers yes; does not flag the 15 km contradiction"
+ },
+ "30|instruction_following|1": {
+  "score": 0,
+  "note": "does not ask about protective equipment experience or training"
+ },
+ "29|multi_session_reasoning|0": {
+  "score": 0.17,
+  "note": "no $256 equipment figure or 140 min recovery; time estimate 4-4.75h partial"
+ },
+ "31|knowledge_update|0": {
+  "score": 0,
+  "note": "gives 7 km as current target rather than 6 km"
+ },
+ "31|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "31|event_ordering|1": {
+  "score": 0.6,
+  "note": "missing gift considerations and praise reflection; several items partial or out of order"
+ },
+ "31|summarization|1": {
+  "score": 0.67,
+  "note": "cities list incomplete; flexibility/peak avoidance missing"
+ },
+ "32|preference_following|0": {
+  "score": 0.75,
+  "note": "also suggests restaurants and a fancy meal"
+ },
+ "33|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "33|event_ordering|1": {
+  "score": 0.9,
+  "note": "tables/chairs logistics placed before cleanup planning"
+ },
+ "34|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "answers yes; does not flag contradiction or ask which is correct"
+ },
+ "34|temporal_reasoning|0": {
+  "score": 0.75,
+  "note": "gives 137 days (correct for leap year 2024) vs reference 136"
+ },
+ "35|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "35|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "35|temporal_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "33|event_ordering|0": {
+  "score": 0.36,
+  "note": "missing task assignments, surprise, toasts, success reflection, guest engagement, future collaboration"
+ },
+ "1|information_extraction|0": {
+  "score": 1
+ },
+ "1|contradiction_resolution|1": {
+  "score": 1
+ },
+ "1|multi_session_reasoning|0": {
+  "score": 0.75,
+  "note": "franc lightweight point only implied; PostgreSQL indexes but no foreign keys"
+ },
+ "2|information_extraction|0": {
+  "score": 1
+ },
+ "2|temporal_reasoning|0": {
+  "score": 1
+ },
+ "3|contradiction_resolution|0": {
+  "score": 0.75,
+  "note": "asserts tests exist; contradiction only weakly flagged"
+ },
+ "3|knowledge_update|1": {
+  "score": 1
+ },
+ "3|summarization|0": {
+  "score": 0.4,
+  "note": "missing asyncio/aiohttp rate-limit fix and 429 backoff; partial Redis and metrics"
+ },
+ "4|information_extraction|1": {
+  "score": 1
+ },
+ "4|multi_session_reasoning|0": {
+  "score": 0.625,
+  "note": "counts 12 issues not 3; API latency item only partly"
+ },
+ "4|summarization|1": {
+  "score": 0.375,
+  "note": "missing Docker/ECS/GKE deployment, OOM debugging, connection resets, Redis WATCH/MULTI"
+ },
+ "5|event_ordering|0": {
+  "score": 0.5,
+  "note": "missing namespace/game logic, encrypted subprotocol, token rotation, multiplayer latency; some out of order"
+ },
+ "6|contradiction_resolution|0": {
+  "score": 0,
+  "note": "answers yes without noting the contradiction"
+ },
+ "6|knowledge_update|0": {
+  "score": 0.5,
+  "note": "mentions 8 but refuses to commit to it"
+ },
+ "6|temporal_reasoning|0": {
+  "score": 0.25,
+  "note": "answers 14 days (Jan 10 to Jan 24) instead of 8"
+ },
+ "7|abstention|1": {
+  "score": 1
+ },
+ "7|preference_following|0": {
+  "score": 0.75,
+  "note": "numerical method only described, not computed or compared in detail"
+ },
+ "8|abstention|0": {
+  "score": 1
+ },
+ "8|instruction_following|0": {
+  "score": 1
+ },
+ "8|temporal_reasoning|1": {
+  "score": 0,
+  "note": "says linear Diophantine came first"
+ },
+ "9|information_extraction|1": {
+  "score": 1
+ },
+ "9|knowledge_update|1": {
+  "score": 1
+ },
+ "10|event_ordering|0": {
+  "score": 0.8,
+  "note": "spherical/GeoGebra phase out of order; GeoGebra 3D placed before tessellations"
+ },
+ "9|temporal_reasoning|0": {
+  "score": 1
+ },
+ "10|temporal_reasoning|1": {
+  "score": 1
+ },
+ "10|preference_following|1": {
+  "score": 0.75,
+  "note": "real-world GPS context but no astronomy framing"
+ },
+ "9|summarization|0": {
+  "score": 1
+ },
+ "12|contradiction_resolution|0": {
+  "score": 1
+ },
+ "12|abstention|0": {
+  "score": 0.5,
+  "note": "lists mentoring details as professional background and speculates on credentials"
+ },
+ "12|instruction_following|1": {
+  "score": 1
+ },
+ "13|information_extraction|0": {
+  "score": 1
+ },
+ "14|abstention|1": {
+  "score": 1
+ },
+ "13|knowledge_update|0": {
+  "score": 0.5,
+  "note": "names $60,000 as latest but hedges and asks to confirm"
+ },
+ "14|event_ordering|0": {
+  "score": 0.69,
+  "note": "no regulatory item; research and diversification items partial or out of order"
+ },
+ "15|abstention|1": {
+  "score": 1
+ },
+ "15|knowledge_update|1": {
+  "score": 1
+ },
+ "15|event_ordering|0": {
+  "score": 0.8,
+  "note": "missing balancing commitments; Pilates/partners and accountability partial or out of order"
+ },
+ "15|summarization|0": {
+  "score": 0.8,
+  "note": "macronutrient sources/portion control and hydration only partly covered"
+ },
+ "16|temporal_reasoning|1": {
+  "score": 1
+ },
+ "16|event_ordering|1": {
+  "score": 0.71,
+  "note": "BP device use, vitamin D, post-procedure and cholesterol items partial or out of order"
+ },
+ "17|knowledge_update|1": {
+  "score": 1
+ },
+ "17|temporal_reasoning|1": {
+  "score": 1
+ },
+ "18|contradiction_resolution|1": {
+  "score": 1
+ },
+ "18|event_ordering|1": {
+  "score": 0.69,
+  "note": "missing couples therapy and productivity apps; time management partial"
+ },
+ "18|preference_following|1": {
+  "score": 0.75,
+  "note": "recommends mornings but does not tie timing to energy"
+ },
+ "18|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "weekly reflections and gratitude, but monthly reflections not stated"
+ },
+ "19|event_ordering|1": {
+  "score": 0.15,
+  "note": "items largely do not match poetry/calligraphy/concert sequence; only film and concert partial"
+ },
+ "19|knowledge_update|0": {
+  "score": 1
+ },
+ "20|knowledge_update|0": {
+  "score": 0,
+  "note": "states 8,000 TRY not 7,500 TRY"
+ },
+ "20|preference_following|1": {
+  "score": 1
+ },
+ "21|abstention|0": {
+  "score": 1
+ },
+ "21|preference_following|0": {
+  "score": 1
+ },
+ "22|abstention|0": {
+  "score": 1
+ },
+ "22|temporal_reasoning|1": {
+  "score": 1
+ },
+ "22|multi_session_reasoning|0": {
+  "score": 0,
+  "note": "states $720/$800 not $500"
+ },
+ "22|event_ordering|0": {
+  "score": 0.71,
+  "note": "missing general couple DIY, home decor, low-impact painting; smart thermostat out of order"
+ },
+ "23|temporal_reasoning|0": {
+  "score": 1
+ },
+ "24|knowledge_update|1": {
+  "score": 0,
+  "note": "states March 28 not April 4"
+ },
+ "24|instruction_following|0": {
+  "score": 0.5,
+  "note": "cooking time given for only one recipe"
+ },
+ "24|temporal_reasoning|0": {
+  "score": 0.5,
+  "note": "computes 43 days but hedges with 57 and asks which"
+ },
+ "25|abstention|0": {
+  "score": 0.25,
+  "note": "presents an agenda and outcomes rather than saying not available"
+ },
+ "25|instruction_following|0": {
+  "score": 1
+ },
+ "26|knowledge_update|0": {
+  "score": 1
+ },
+ "26|knowledge_update|1": {
+  "score": 0,
+  "note": "states 85 participants not 52"
+ },
+ "26|preference_following|0": {
+  "score": 1
+ },
+ "24|summarization|1": {
+  "score": 0.83,
+  "note": "missing gluten-free/macro balance detail, organizational tools/flexibility, non-food rewards"
+ },
+ "28|abstention|1": {
+  "score": 0,
+  "note": "describes the gala atmosphere instead of abstaining"
+ },
+ "28|abstention|0": {
+  "score": 0,
+  "note": "gives criteria instead of abstaining"
+ },
+ "28|instruction_following|1": {
+  "score": 1
+ },
+ "29|abstention|0": {
+  "score": 0,
+  "note": "lists detailed rules instead of abstaining"
+ },
+ "29|instruction_following|0": {
+  "score": 0.17,
+  "note": "calorie counts given for only one snack"
+ },
+ "26|multi_session_reasoning|0": {
+  "score": 0.6,
+  "note": "wrong intake math ($57k not $104k) and course figures (not 50 x $300)"
+ },
+ "30|event_ordering|1": {
+  "score": 0.25,
+  "note": "omits all Wanda-related items; others only partly matched"
+ },
+ "29|summarization|0": {
+  "score": 0.94,
+  "note": "attire for Olive Tree Bistro dinners not covered"
+ },
+ "30|preference_following|1": {
+  "score": 1
+ },
+ "30|summarization|1": {
+  "score": 0.89,
+  "note": "terrain (mountains/forests) not mentioned"
+ },
+ "31|temporal_reasoning|0": {
+  "score": 1
+ },
+ "32|information_extraction|1": {
+  "score": 1
+ },
+ "32|temporal_reasoning|1": {
+  "score": 1
+ },
+ "32|multi_session_reasoning|0": {
+  "score": 0.2,
+  "note": "says 1 city (Bangkok) not 4"
+ },
+ "33|contradiction_resolution|1": {
+  "score": 0.875,
+  "note": "cites walkthrough, not electricity/parking confirmation; leans to yes"
+ },
+ "34|abstention|0": {
+  "score": 1
+ },
+ "34|abstention|1": {
+  "score": 1
+ },
+ "34|information_extraction|1": {
+  "score": 1
+ },
+ "34|preference_following|0": {
+  "score": 0.5,
+  "note": "recommends local performers but no cost argument favoring them"
+ },
+ "35|information_extraction|1": {
+  "score": 0,
+  "note": "describes different allocation (candles, photo booth), not the three-set plan"
+ },
+ "35|knowledge_update|1": {
+  "score": 1
+ },
+ "10|summarization|1": {
+  "score": 0.9,
+  "note": "orthogonal-circle construction method in GeoGebra only partly covered"
+ },
+ "1|abstention|1": {
+  "score": 0,
+  "note": "Claims a 90% satisfaction feedback record instead of stating no info"
+ },
+ "1|instruction_following|1": {
+  "score": 0.75,
+  "note": "Versions given for some methods (TLS 1.3, OpenSSL) but not consistently alongside each method"
+ },
+ "1|preference_following|0": {
+  "score": 1
+ },
+ "2|information_extraction|1": {
+  "score": 1
+ },
+ "2|preference_following|0": {
+  "score": 1
+ },
+ "2|summarization|1": {
+  "score": 0.75,
+  "note": "Missing APScheduler daily digest and cosine/TF-IDF/PCA relevance tuning; preference table design only partly matches"
+ },
+ "3|multi_session_reasoning|0": {
+  "score": 1
+ },
+ "3|preference_following|1": {
+  "score": 1
+ },
+ "4|contradiction_resolution|0": {
+  "score": 0.5,
+  "note": "Lists milestones but does not flag the 'never planned milestones' contradiction; flags other conflicts"
+ },
+ "4|temporal_reasoning|0": {
+  "score": 0.5,
+  "note": "Gives 51 days as primary answer; 45 days (Apr 15 to May 30) only as original value"
+ },
+ "4|summarization|0": {
+  "score": 0.58,
+  "note": "Missing materialized views; REST microservices, Docker Compose networking and modular testing only partly covered"
+ },
+ "5|instruction_following|0": {
+  "score": 0.75,
+  "note": "Versions for Express, Kong, Socket.IO but many middleware recommended without versions"
+ },
+ "6|abstention|0": {
+  "score": 1
+ },
+ "6|instruction_following|1": {
+  "score": 0.83,
+  "note": "Geometric interpretation of the multiplier itself is thin"
+ },
+ "6|preference_following|0": {
+  "score": 1
+ },
+ "7|contradiction_resolution|1": {
+  "score": 1
+ },
+ "7|knowledge_update|0": {
+  "score": 0,
+  "note": "Recommends h = 0.1 instead of h = 0.25"
+ },
+ "7|temporal_reasoning|1": {
+  "score": 1
+ },
+ "8|event_ordering|1": {
+  "score": 0.36,
+  "note": "Items differ from expected Euclidean algorithm / FLT practice / primality test sequence; several missing"
+ },
+ "8|preference_following|0": {
+  "score": 1
+ },
+ "9|information_extraction|0": {
+  "score": 1
+ },
+ "9|temporal_reasoning|1": {
+  "score": 0,
+  "note": "Answers 55 days (Jan 25 to Mar 20) instead of 11 days to Feb 5"
+ },
+ "10|abstention|0": {
+  "score": 0,
+  "note": "Reports many emotional reactions instead of stating no info"
+ },
+ "10|instruction_following|0": {
+  "score": 0.5,
+  "note": "Primarily lat/long spherical law of cosines; vector approach only an alternative"
+ },
+ "11|information_extraction|0": {
+  "score": 1
+ },
+ "10|summarization|0": {
+  "score": 0.9,
+  "note": "Comparison of direct formula vs numerical integration pros/cons not covered"
+ },
+ "10|multi_session_reasoning|1": {
+  "score": 0.5,
+  "note": "Angle sums and curvature correct but parallel-postulate links missing (truncated)"
+ },
+ "11|summarization|1": {
+  "score": 0.56,
+  "note": "Missing technical readiness, energy/breaks, reflection; partnerships only partly covered"
+ },
+ "7|summarization|1": {
+  "score": 0.71,
+  "note": "Missing nonlinear regression with more data; harvesting/linearization and parameter estimation only partial"
+ },
+ "12|temporal_reasoning|1": {
+  "score": 0.75,
+  "note": "Hedges between 52 and 47 days"
+ },
+ "13|abstention|1": {
+  "score": 0,
+  "note": "Provides detailed mortgage breakdown instead of stating none exists"
+ },
+ "13|temporal_reasoning|0": {
+  "score": 1
+ },
+ "14|information_extraction|1": {
+  "score": 1
+ },
+ "14|knowledge_update|1": {
+  "score": 1
+ },
+ "14|summarization|0": {
+  "score": 0.63,
+  "note": "No $1,200 by Sept 1 goal, no fee minimization; $1,050 start not framed as starting point"
+ },
+ "15|instruction_following|1": {
+  "score": 1
+ },
+ "15|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "Does not address exceeding planned sessions"
+ },
+ "16|abstention|0": {
+  "score": 0.75,
+  "note": "Says credentials unknown but presents specialty/areas of involvement"
+ },
+ "16|contradiction_resolution|0": {
+  "score": 0.25,
+  "note": "Answers yes without flagging the 'never contacted him' contradiction"
+ },
+ "17|abstention|0": {
+  "score": 1
+ },
+ "17|abstention|1": {
+  "score": 0.5,
+  "note": "Gives maintenance instructions as if discussed, with only a caveat about manufacturer specifics"
+ },
+ "17|preference_following|0": {
+  "score": 0.75,
+  "note": "Meditation presented as primary; reading a physical book only one item"
+ },
+ "18|information_extraction|0": {
+  "score": 0.5,
+  "note": "Lists March 25 3 PM but concludes latest session is Jan 15, 2025"
+ },
+ "18|event_ordering|0": {
+  "score": 0.81,
+  "note": "Missing meeting place/community item; creative activities placed before budgeting"
+ },
+ "19|information_extraction|0": {
+  "score": 1
+ },
+ "18|summarization|1": {
+  "score": 1
+ },
+ "19|summarization|1": {
+  "score": 1
+ },
+ "20|instruction_following|0": {
+  "score": 1
+ },
+ "20|event_ordering|1": {
+  "score": 1
+ },
+ "20|multi_session_reasoning|1": {
+  "score": 0.5,
+  "note": "Expenses 8,320 and shortfall 1,237 instead of 7,500 and 417"
+ },
+ "20|information_extraction|0": {
+  "score": 0.5,
+  "note": "Mentions 2,500 TRY only as past amount; says current saving differs"
+ },
+ "21|multi_session_reasoning|0": {
+  "score": 0.5,
+  "note": "Presents $1,550 as one of two alternatives with $1,700"
+ },
+ "21|multi_session_reasoning|1": {
+  "score": 0.79,
+  "note": "No coordination with Selim on pricing/strategy; marketing finalization only partial"
+ },
+ "22|instruction_following|1": {
+  "score": 1
+ },
+ "23|contradiction_resolution|0": {
+  "score": 1
+ },
+ "23|instruction_following|0": {
+  "score": 1
+ },
+ "24|abstention|1": {
+  "score": 1
+ },
+ "23|preference_following|1": {
+  "score": 1
+ },
+ "24|temporal_reasoning|1": {
+  "score": 1
+ },
+ "24|information_extraction|1": {
+  "score": 0.38,
+  "note": "Does not describe the stew, legume salad, casserole and legume stir-fry recipes"
+ },
+ "24|multi_session_reasoning|0": {
+  "score": 0.38,
+  "note": "Highest $3.65 and 15.1% instead of $3.45 and 10.14%"
+ },
+ "25|preference_following|1": {
+  "score": 1
+ },
+ "26|abstention|0": {
+  "score": 0.75,
+  "note": "Reports Steven connection as an outcome"
+ },
+ "26|temporal_reasoning|1": {
+  "score": 0.5,
+  "note": "Answers 34 days (to Jan 4); 35 only as alternative"
+ },
+ "26|instruction_following|1": {
+  "score": 1
+ },
+ "27|knowledge_update|0": {
+  "score": 0,
+  "note": "Gives 70% as current instead of 60%"
+ },
+ "27|temporal_reasoning|0": {
+  "score": 1
+ },
+ "27|multi_session_reasoning|1": {
+  "score": 1
+ },
+ "28|temporal_reasoning|0": {
+  "score": 1
+ },
+ "28|preference_following|0": {
+  "score": 0.25,
+  "note": "Schedules training 5-7 PM with hard stop at 7, not 7-9 PM"
+ },
+ "29|knowledge_update|1": {
+  "score": 1
+ },
+ "29|temporal_reasoning|1": {
+  "score": 1
+ },
+ "29|summarization|1": {
+  "score": 0.58,
+  "note": "Missing mindfulness meditation, ankle balance board, kinesiology tape; physio balancing partial"
+ },
+ "30|knowledge_update|1": {
+  "score": 0,
+  "note": "Gives 4 km/h as latest instead of 4.5 km/h"
+ },
+ "31|abstention|0": {
+  "score": 0.5,
+  "note": "Says it found details and lists guidance, though notes no property-specific routes"
+ },
+ "31|multi_session_reasoning|0": {
+  "score": 0.33,
+  "note": "8 nights with 5 in Tokyo instead of 4 nights with 1 in Tokyo"
+ },
+ "31|preference_following|1": {
+  "score": 0.75,
+  "note": "Leads with festivals and shows rather than workshops"
+ },
+ "32|instruction_following|1": {
+  "score": 0,
+  "note": "Cost given only in USD"
+ },
+ "32|temporal_reasoning|0": {
+  "score": 0,
+  "note": "Answers 40 days instead of 37"
+ },
+ "33|abstention|0": {
+  "score": 1
+ },
+ "33|knowledge_update|1": {
+  "score": 0.25,
+  "note": "Final answer 2 plus-ones and 36; 7 mentioned only as interim, 35 not given"
+ },
+ "33|preference_following|0": {
+  "score": 0.83,
+  "note": "Also suggests printed invitations and personal calls"
+ },
+ "34|event_ordering|1": {
+  "score": 0.14,
+  "note": "Items largely different; no Facebook ads, influencers, radio ads, jazz trio"
+ },
+ "34|temporal_reasoning|1": {
+  "score": 1
+ },
+ "35|event_ordering|0": {
+  "score": 0.43,
+  "note": "Missing moment of silence and traditional foods; several items out of order"
+ },
+ "34|multi_session_reasoning|1": {
+  "score": 0.56,
+  "note": "Missing sponsorships/crowdfunding and Steve rehearsal; Kathleen, marketing cuts, volunteers partial"
+ },
+ "35|preference_following|0": {
+  "score": 0.83,
+  "note": "Rehearsal mentioned only as one late step"
+ },
+ "13|summarization|1": {
+  "score": 0.75,
+  "note": "Missing Selin Kaya property management; viewing checklists and overall guidance partial"
+ },
+ "1|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "1|temporal_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "2|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Answered yes without flagging the contradiction or asking; only 92% detail matched"
+ },
+ "2|knowledge_update|0": {
+  "score": 0,
+  "note": "Said 512MB, not updated 384MB"
+ },
+ "2|temporal_reasoning|1": {
+  "score": 0,
+  "note": "Claimed it cannot be calculated; rejected 4 days"
+ },
+ "3|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "3|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "4|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "3|event_ordering|0": {
+  "score": 0.4,
+  "note": "Missing data availability, alerts, error handling, SSL/load balancer; REST/Alpaca only partial; ML out of order"
+ },
+ "4|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "5|contradiction_resolution|0": {
+  "score": 0.875,
+  "note": "Flags contradiction but largely resolves it itself; weak clarification ask"
+ },
+ "5|temporal_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "6|abstention|1": {
+  "score": 0.25,
+  "note": "Presented inferred emotional reaction as documented; only partial caveat on confidence"
+ },
+ "6|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "6|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "7|information_extraction|0": {
+  "score": 0,
+  "note": "Gave 0.1 (and 0.03/0.5), not 0.035"
+ },
+ "7|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "7|summarization|0": {
+  "score": 0.5,
+  "note": "Missing implicit-differentiation verification and v=y/x substitution walkthroughs; homogeneous only mentioned"
+ },
+ "8|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "9|abstention|0": {
+  "score": 1,
+  "note": ""
+ },
+ "9|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "9|event_ordering|0": {
+  "score": 0.4,
+  "note": "Lists permutations/probability topics; misses error correction, triple intersections, multinomial vs permutation distinction, combined use, clarifications; group-size examples out of order"
+ },
+ "10|knowledge_update|0": {
+  "score": 1,
+  "note": ""
+ },
+ "10|event_ordering|1": {
+  "score": 0.67,
+  "note": "Equal vs varied side triangles only partial and varied out of order; half-plane before geodesics; haversine/GeoGebra export and shortest-path partial"
+ },
+ "11|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "11|knowledge_update|1": {
+  "score": 0.5,
+  "note": "Asked 5 vs 7 and treated 7 as total, not stating 7 positive reviews"
+ },
+ "11|preference_following|1": {
+  "score": 0.33,
+  "note": "Only a passing note that morning fits preference; little morning-specific advice"
+ },
+ "11|temporal_reasoning|1": {
+  "score": 0.25,
+  "note": "Main answer 23 days from April 22; 5 days only as alternative"
+ },
+ "12|temporal_reasoning|0": {
+  "score": 0.75,
+  "note": "Computed 124 days instead of expected 123"
+ },
+ "12|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "13|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "13|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "13|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "14|multi_session_reasoning|0": {
+  "score": 0.5,
+  "note": "Total $15 not $17.50; missed $2.50 fee"
+ },
+ "14|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "15|event_ordering|1": {
+  "score": 0.3,
+  "note": "Lists people rather than roles; misses half marathon, Don hiking, meal prep, clinical workload, New Year 5K; mom/Jenny order swapped"
+ },
+ "14|multi_session_reasoning|1": {
+  "score": 0.5,
+  "note": "Cardano $150 not $300; passive income $250/17% not $400 of $600"
+ },
+ "15|summarization|1": {
+  "score": 0.75,
+  "note": "North Ericshire Runners, self-reflection and mindfulness/balanced approach only partially covered"
+ },
+ "16|multi_session_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "16|temporal_reasoning|0": {
+  "score": 0.25,
+  "note": "Answered 6 days from Feb 14; 8 days only as alternative"
+ },
+ "17|event_ordering|1": {
+  "score": 0.93,
+  "note": "Sleep effect appears after social boundaries, out of order"
+ },
+ "16|summarization|0": {
+  "score": 0.83,
+  "note": "Appointment preparation guidance and jogging-with-son/sleep balance only partially covered"
+ },
+ "18|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "18|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "18|knowledge_update|0": {
+  "score": 0,
+  "note": "Concluded $2,500 instead of $2,800"
+ },
+ "19|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "19|multi_session_reasoning|1": {
+  "score": 0.5,
+  "note": "Total 85 not 40; used 70 for Grammar in Practice instead of 25"
+ },
+ "20|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "20|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "20|temporal_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "21|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "21|knowledge_update|0": {
+  "score": 0,
+  "note": "Concluded 9:00 AM as latest, not 8:30 AM"
+ },
+ "22|contradiction_resolution|0": {
+  "score": 0.25,
+  "note": "Answered yes; did not flag the never-worn statement or ask for clarification"
+ },
+ "23|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "22|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "23|event_ordering|0": {
+  "score": 0.43,
+  "note": "Organised by cuisine; misses past collaborations and live sessions/audience; tools, events, content creation only partial"
+ },
+ "23|multi_session_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "24|contradiction_resolution|0": {
+  "score": 0.25,
+  "note": "Framed as progression, no contradiction flagged, no family-of-five mention, no question"
+ },
+ "24|event_ordering|0": {
+  "score": 0.83,
+  "note": "Gluten-free and Mary herb items partly out of order; future-week herb planning only partial"
+ },
+ "25|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "25|knowledge_update|0": {
+  "score": 0,
+  "note": "Concluded 50 users, not 48"
+ },
+ "25|temporal_reasoning|1": {
+  "score": 0,
+  "note": "Said conference date unknown; no 11 months"
+ },
+ "25|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "Omar goal-setting and cost-effective loyalty programs only partly addressed"
+ },
+ "26|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "26|summarization|0": {
+  "score": 0.29,
+  "note": "Misses order fulfillment/shipping errors and staff-hour allocation; ads, demographics, Asana/SOPs only partial"
+ },
+ "27|information_extraction|1": {
+  "score": 0.75,
+  "note": "Positive memories partial; work-life balance not mentioned"
+ },
+ "27|summarization|0": {
+  "score": 0.58,
+  "note": "Missing finances, teammates mental-prep support, weather contingencies; recovery/nutrition partial"
+ },
+ "28|knowledge_update|0": {
+  "score": 1,
+  "note": ""
+ },
+ "28|temporal_reasoning|1": {
+  "score": 0.75,
+  "note": "Said about 6 months 3 weeks rather than 7 months"
+ },
+ "29|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "29|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "30|event_ordering|0": {
+  "score": 0.94,
+  "note": "Wildlife safety advice appears after weather, out of order"
+ },
+ "30|information_extraction|0": {
+  "score": 0.5,
+  "note": "Gave booking date Aug 10 as answer; Nov 8 only as travel date"
+ },
+ "30|temporal_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "31|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "31|knowledge_update|1": {
+  "score": 0,
+  "note": "Said 150 photos, not 180"
+ },
+ "32|abstention|0": {
+  "score": 1,
+  "note": ""
+ },
+ "32|contradiction_resolution|0": {
+  "score": 0.5,
+  "note": "Cited both statements but explained them away as timeline; no contradiction flagged or question asked"
+ },
+ "32|summarization|1": {
+  "score": 1,
+  "note": ""
+ },
+ "32|summarization|0": {
+  "score": 0.56,
+  "note": "Missing sun protection/medical facilities; food advice, Siem Reap hydration, activity balance, cultural resources, insurance claims only partial"
+ },
+ "33|knowledge_update|0": {
+  "score": 0,
+  "note": "Recommended 6, not 7"
+ },
+ "33|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "34|knowledge_update|0": {
+  "score": 1,
+  "note": ""
+ },
+ "34|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "34|multi_session_reasoning|0": {
+  "score": 0,
+  "note": "Said 8 artisan and 10 food stalls"
+ },
+ "35|instruction_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "33|summarization|1": {
+  "score": 0.5,
+  "note": "Leather-bound journal gift missing; Sylvia skills and confidentiality only partial"
+ },
+ "1|abstention|0": {
+  "score": 1
+ },
+ "1|event_ordering|0": {
+  "score": 0.3,
+  "note": "Covers only translation API/auth/rate-limit/caching/security partially; missing LLM fine-tuning, RBAC, TLS, streaming, chunk size; some order issues"
+ },
+ "2|abstention|1": {
+  "score": 1
+ },
+ "2|knowledge_update|1": {
+  "score": 1
+ },
+ "3|abstention|0": {
+  "score": 1
+ },
+ "3|information_extraction|0": {
+  "score": 1
+ },
+ "3|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "Puts debugging first and tests second, reversing the expected priority of unit tests first"
+ },
+ "4|information_extraction|0": {
+  "score": 1
+ },
+ "4|knowledge_update|1": {
+  "score": 0,
+  "note": "States 3600s TTL instead of updated 7200s"
+ },
+ "4|multi_session_reasoning|1": {
+  "score": 0.75,
+  "note": "No mention of improved tokenization; Docker internal networking not explicit"
+ },
+ "5|contradiction_resolution|1": {
+  "score": 1
+ },
+ "5|multi_session_reasoning|0": {
+  "score": 0.5,
+  "note": "Counts 9 not six; misses Express.js and Docker; Node.js only incidental"
+ },
+ "6|information_extraction|1": {
+  "score": 1
+ },
+ "6|event_ordering|1": {
+  "score": 0.4,
+  "note": "Misses tilted box and scaling items; necessity/example merged; specific computation placed out of order"
+ },
+ "7|abstention|0": {
+  "score": 0,
+  "note": "Presents assistant walkthrough as feedback rather than stating no feedback info exists"
+ },
+ "7|instruction_following|1": {
+  "score": 0.33,
+  "note": "Verification only mentioned as a tip; no explicit substitution/verification step performed"
+ },
+ "7|temporal_reasoning|0": {
+  "score": 0,
+  "note": "Claims no kickoff/review info; does not give 22 days"
+ },
+ "8|information_extraction|0": {
+  "score": 1
+ },
+ "8|knowledge_update|0": {
+  "score": 0.75,
+  "note": "Gives 15 but treats 92% as a goal rather than current accuracy"
+ },
+ "9|abstention|1": {
+  "score": 0,
+  "note": "Provides an agenda instead of stating information is unavailable"
+ },
+ "9|event_ordering|1": {
+  "score": 0.5,
+  "note": "Bayes items merged; missing feedback request, preference over expansions, intuitive LOTP; counting items out of order"
+ },
+ "9|preference_following|1": {
+  "score": 1
+ },
+ "9|summarization|1": {
+  "score": 1
+ },
+ "10|preference_following|0": {
+  "score": 0.33,
+  "note": "Relies mainly on spherical law of cosines/haversine; vectors only as derivation side note"
+ },
+ "11|event_ordering|0": {
+  "score": 0.5,
+  "note": "Several items missing (follow-ups after presentations, work-life/group Zoom) and some out of order"
+ },
+ "11|contradiction_resolution|0": {
+  "score": 0.75,
+  "note": "Cites March 10 workshop rather than friend met at a psychology conference"
+ },
+ "12|abstention|1": {
+  "score": 1
+ },
+ "12|event_ordering|0": {
+  "score": 0.5,
+  "note": "Misses mom mentoring and team communication; raise/performance/tax only partial"
+ },
+ "12|preference_following|1": {
+  "score": 1
+ },
+ "13|abstention|0": {
+  "score": 0,
+  "note": "Presents Manuel's advice instead of stating info not available"
+ },
+ "13|information_extraction|1": {
+  "score": 1
+ },
+ "13|temporal_reasoning|1": {
+  "score": 0.25,
+  "note": "Answers 301 days using Jan 20, 2025 as last viewing instead of 2 days (Mar 25 to Mar 27)"
+ },
+ "14|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Does not notice contradiction; only cites the avoided phishing scam"
+ },
+ "14|preference_following|1": {
+  "score": 1
+ },
+ "15|contradiction_resolution|0": {
+  "score": 1
+ },
+ "15|contradiction_resolution|1": {
+  "score": 1
+ },
+ "15|information_extraction|1": {
+  "score": 0.5,
+  "note": "Describes general physical; misses avoid caffeine/nicotine, fasting 9-12h, result timing specifics"
+ },
+ "16|contradiction_resolution|1": {
+  "score": 1
+ },
+ "16|knowledge_update|1": {
+  "score": 0,
+  "note": "Gives 3 x $200 as latest instead of 4 x $150"
+ },
+ "16|multi_session_reasoning|0": {
+  "score": 0.88,
+  "note": "Says no later duration data instead of ~5 minutes for weekly episodes"
+ },
+ "17|multi_session_reasoning|0": {
+  "score": 1
+ },
+ "17|instruction_following|1": {
+  "score": 0.17,
+  "note": "Only a passing 'check warranty terms'; no period, coverage or claim info"
+ },
+ "17|multi_session_reasoning|1": {
+  "score": 0.8,
+  "note": "Circadian rhythm and longer uninterrupted sleep only partially addressed"
+ },
+ "18|preference_following|0": {
+  "score": 0.75,
+  "note": "Suggests morning but also offers evening/after-dinner backup"
+ },
+ "19|event_ordering|0": {
+  "score": 0.44,
+  "note": "Misses idioms, debate, exam prep; unavailability and resumption only partial"
+ },
+ "19|instruction_following|1": {
+  "score": 1
+ },
+ "20|abstention|0": {
+  "score": 1
+ },
+ "19|summarization|0": {
+  "score": 0.5,
+  "note": "Missing monthly reviews, empathy/cultural sensitivity, TurkishClass101, progress assessments, travel-over-courses decision"
+ },
+ "20|summarization|1": {
+  "score": 1
+ },
+ "21|abstention|1": {
+  "score": 1
+ },
+ "21|event_ordering|1": {
+  "score": 0.42,
+  "note": "Misses storage-impact/compromise consequences and family moving away; others partial"
+ },
+ "21|preference_following|1": {
+  "score": 1
+ },
+ "22|event_ordering|1": {
+  "score": 0.45,
+  "note": "Misses Nicolas intro, wiring, plumber, Legrand, hanging lights"
+ },
+ "22|preference_following|0": {
+  "score": 0.83,
+  "note": "Leads with videos but also recommends books and written guides"
+ },
+ "23|event_ordering|1": {
+  "score": 0.8,
+  "note": "Missing live stream item; picnic tips partial; promotion placed before demo"
+ },
+ "23|contradiction_resolution|1": {
+  "score": 1
+ },
+ "24|abstention|0": {
+  "score": 0.5,
+  "note": "Notes no record of the class itself but presents prep discussion as content"
+ },
+ "24|event_ordering|1": {
+  "score": 0.64,
+  "note": "Budget/time and cooking stress missing; vegetarian, Mediterranean, spicy out of order"
+ },
+ "24|multi_session_reasoning|1": {
+  "score": 0.33,
+  "note": "Only mentions 5 servings; misses 40% and 6 servings"
+ },
+ "25|information_extraction|0": {
+  "score": 0.5,
+  "note": "Says decision made in March; April 8 given only as application date"
+ },
+ "24|summarization|0": {
+  "score": 0.88,
+  "note": "Olive oil/seasonal produce, family involvement and gradual spice adjustment only partial"
+ },
+ "25|multi_session_reasoning|0": {
+  "score": 1
+ },
+ "26|contradiction_resolution|0": {
+  "score": 1
+ },
+ "27|contradiction_resolution|0": {
+  "score": 0.5,
+  "note": "Denies any contradiction and does not ask which is correct"
+ },
+ "26|event_ordering|0": {
+  "score": 0.5,
+  "note": "Missing e-commerce, lighting, email automation; training and infra only partial"
+ },
+ "27|knowledge_update|1": {
+  "score": 0.5,
+  "note": "Hedges between twice and thrice weekly instead of stating twice"
+ },
+ "27|preference_following|0": {
+  "score": 1
+ },
+ "28|contradiction_resolution|0": {
+  "score": 1
+ },
+ "28|instruction_following|0": {
+  "score": 1
+ },
+ "29|event_ordering|0": {
+  "score": 0.65,
+  "note": "Missing beginner communication/pacing; several items partial or out of order"
+ },
+ "28|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "No mention of shift from balancing indoor and beach volleyball"
+ },
+ "30|abstention|1": {
+  "score": 1
+ },
+ "30|knowledge_update|0": {
+  "score": 1
+ },
+ "30|preference_following|0": {
+  "score": 1
+ },
+ "31|contradiction_resolution|1": {
+  "score": 1
+ },
+ "30|multi_session_reasoning|1": {
+  "score": 0,
+  "note": "States $1,500 instead of $690"
+ },
+ "31|preference_following|0": {
+  "score": 0.83,
+  "note": "Guide availability at sites only partially addressed"
+ },
+ "32|instruction_following|0": {
+  "score": 1
+ },
+ "32|event_ordering|0": {
+  "score": 0.83,
+  "note": "Missing trip highlights/involvement; compromise item only partial"
+ },
+ "31|summarization|0": {
+  "score": 0.55,
+  "note": "Missing dialects and post-trip debrief; several items partial"
+ },
+ "30|temporal_reasoning|0": {
+  "score": 0.25,
+  "note": "Disputes premise, places day 6 on Nov 14; does not give 7 days from Nov 6"
+ },
+ "33|preference_following|1": {
+  "score": 1
+ },
+ "34|event_ordering|0": {
+  "score": 0.58,
+  "note": "Missing duration/scheduling; budget first and artist suitability out of order; last-minute changes partial"
+ },
+ "35|abstention|0": {
+  "score": 1
+ },
+ "35|information_extraction|0": {
+  "score": 0.5,
+  "note": "Gives $50 as latest, $200 only as earlier value"
+ },
+ "35|temporal_reasoning|1": {
+  "score": 1
+ },
+ "35|summarization|1": {
+  "score": 0.8,
+  "note": "Volume per phase and cleanup atmosphere only partial"
+ },
+ "1|event_ordering|1": {
+  "score": 0.25,
+  "note": "Covers schema, partial rate limiting/memory store/language detection (out of order); missing translation, fine-tuning, auth, WebSocket, streaming, crypto"
+ },
+ "1|multi_session_reasoning|1": {
+  "score": 0.75,
+  "note": "Says 18 use cases, not four; individual use cases listed"
+ },
+ "2|abstention|0": {
+  "score": 1
+ },
+ "2|instruction_following|1": {
+  "score": 1
+ },
+ "2|preference_following|1": {
+  "score": 0.833,
+  "note": "Mostly native PG, but suggests an application-level cache"
+ },
+ "3|event_ordering|1": {
+  "score": 0.85,
+  "note": "Missing Istio service mesh; REST error handling only placed late"
+ },
+ "3|temporal_reasoning|1": {
+  "score": 1
+ },
+ "4|event_ordering|1": {
+  "score": 0.444,
+  "note": "Missing materialized views, user captions table, Lambda, DynamoDB; schema/indexing out of order; cache consistency partial"
+ },
+ "4|knowledge_update|0": {
+  "score": 1
+ },
+ "4|temporal_reasoning|1": {
+  "score": 1
+ },
+ "5|information_extraction|1": {
+  "score": 1
+ },
+ "5|instruction_following|1": {
+  "score": 1
+ },
+ "6|information_extraction|0": {
+  "score": 0.75,
+  "note": "Leads with direction (3/5,4/5); correct (1/sqrt2,1/sqrt2) only listed as earlier mention"
+ },
+ "6|contradiction_resolution|1": {
+  "score": 0.875,
+  "note": "Cites 4/5 problems, not the 7 problems statement"
+ },
+ "6|temporal_reasoning|1": {
+  "score": 0,
+  "note": "Answers 14 days with Jan 24 end date; expected 24 days to Feb 3"
+ },
+ "7|information_extraction|1": {
+  "score": 1
+ },
+ "7|multi_session_reasoning|1": {
+  "score": 0.9,
+  "note": "Leveraging initial conditions only implicit"
+ },
+ "8|information_extraction|1": {
+  "score": 1
+ },
+ "8|multi_session_reasoning|0": {
+  "score": 1
+ },
+ "8|temporal_reasoning|0": {
+  "score": 0,
+  "note": "Answers 28 days (Jan 10 to Feb 7); expected 30 days Feb 7 to Mar 8"
+ },
+ "9|multi_session_reasoning|1": {
+  "score": 1
+ },
+ "10|contradiction_resolution|0": {
+  "score": 0.125,
+  "note": "Answers yes without flagging contradiction or asking; only mentions side-length practice"
+ },
+ "10|multi_session_reasoning|0": {
+  "score": 1
+ },
+ "8|summarization|1": {
+  "score": 0.875,
+  "note": "Primitive roots definition/existence/group role not covered"
+ },
+ "11|event_ordering|1": {
+  "score": 1
+ },
+ "11|multi_session_reasoning|0": {
+  "score": 0.375,
+  "note": "Answers 2 types; mentions the three categories only as assistant suggestion and dismisses them"
+ },
+ "11|preference_following|0": {
+  "score": 1
+ },
+ "12|information_extraction|0": {
+  "score": 1
+ },
+ "11|summarization|0": {
+  "score": 0.5,
+  "note": "Missing market/legal/platform/staff training and client comfort; journal subscription, co-authorship/editorial, deadlines, post-collaboration only partial"
+ },
+ "13|contradiction_resolution|1": {
+  "score": 1
+ },
+ "13|multi_session_reasoning|0": {
+  "score": 0.667,
+  "note": "Says 4 banks instead of two"
+ },
+ "14|abstention|0": {
+  "score": 0.5,
+  "note": "Says no recorded agenda but supplies expected agenda and post-event takeaways"
+ },
+ "14|knowledge_update|0": {
+  "score": 1
+ },
+ "14|temporal_reasoning|1": {
+  "score": 1
+ },
+ "14|temporal_reasoning|0": {
+  "score": 0.5,
+  "note": "Primary answer 301 days; 139 days (Mar 15 to Aug 1) given only as alternative"
+ },
+ "15|knowledge_update|0": {
+  "score": 0,
+  "note": "Says 2.7 liters, expected 3 liters"
+ },
+ "15|multi_session_reasoning|0": {
+  "score": 0.5,
+  "note": "Total 7 and strength 2 instead of 9 and 4"
+ },
+ "16|abstention|1": {
+  "score": 1
+ },
+ "16|instruction_following|1": {
+  "score": 1
+ },
+ "17|information_extraction|1": {
+  "score": 1
+ },
+ "17|knowledge_update|0": {
+  "score": 1
+ },
+ "17|temporal_reasoning|0": {
+  "score": 1
+ },
+ "18|abstention|1": {
+  "score": 1
+ },
+ "18|temporal_reasoning|0": {
+  "score": 1
+ },
+ "19|abstention|0": {
+  "score": 0.75,
+  "note": "Says no qualifications info but infers a teaching-style profile"
+ },
+ "19|instruction_following|0": {
+  "score": 1
+ },
+ "19|preference_following|1": {
+  "score": 1
+ },
+ "20|contradiction_resolution|0": {
+  "score": 1
+ },
+ "20|preference_following|0": {
+  "score": 1
+ },
+ "21|information_extraction|0": {
+  "score": 1
+ },
+ "21|instruction_following|1": {
+  "score": 1
+ },
+ "20|summarization|0": {
+  "score": 0.5,
+  "note": "Missing rent-area consideration, Ataturk Park sales data, Andrew apartment evaluation; Mevlana agreement partial"
+ },
+ "22|information_extraction|1": {
+  "score": 1
+ },
+ "22|temporal_reasoning|0": {
+  "score": 1
+ },
+ "23|abstention|0": {
+  "score": 0.5,
+  "note": "Notes no step-by-step record but still presents adaptation details"
+ },
+ "22|multi_session_reasoning|1": {
+  "score": 0.7,
+  "note": "No bulk purchases with James; moving heavy items with Don only partial"
+ },
+ "22|summarization|0": {
+  "score": 1
+ },
+ "23|summarization|0": {
+  "score": 0.9,
+  "note": "Lahmacun, simit, baklava recipes not mentioned"
+ },
+ "24|knowledge_update|0": {
+  "score": 0,
+  "note": "Says 2.5-3 hours / latest 3 hours, not 2h45m"
+ },
+ "25|abstention|1": {
+  "score": 0.5,
+  "note": "Provides detailed structure and content, with only a caveat that final text is absent"
+ },
+ "25|temporal_reasoning|0": {
+  "score": 1
+ },
+ "26|contradiction_resolution|1": {
+  "score": 1
+ },
+ "26|event_ordering|1": {
+  "score": 0.375,
+  "note": "Covers office manager, part-time assistant, marketing intern; missing client feedback, assistant training/operations, therapist assistant items"
+ },
+ "27|abstention|0": {
+  "score": 0.5,
+  "note": "Admits drills came from assistant, not Scott, but still lists drills tied to Scott"
+ },
+ "27|event_ordering|0": {
+  "score": 0.6,
+  "note": "Missing skill/team integration, team loyalty, possession; transitions out of order; defensive balance partial"
+ },
+ "27|multi_session_reasoning|0": {
+  "score": 0.75,
+  "note": "Says 8 items instead of three"
+ },
+ "28|contradiction_resolution|1": {
+  "score": 1
+ },
+ "28|knowledge_update|1": {
+  "score": 0,
+  "note": "Says 93%, expected 68%"
+ },
+ "28|information_extraction|1": {
+  "score": 1
+ },
+ "28|summarization|0": {
+  "score": 1
+ },
+ "29|information_extraction|1": {
+  "score": 1
+ },
+ "29|preference_following|0": {
+  "score": 1
+ },
+ "30|abstention|0": {
+  "score": 0,
+  "note": "Presents criteria for choosing W Trek instead of stating none available"
+ },
+ "30|information_extraction|1": {
+  "score": 1
+ },
+ "31|abstention|1": {
+  "score": 0,
+  "note": "Provides a detailed itinerary instead of stating none available"
+ },
+ "31|temporal_reasoning|1": {
+  "score": 1
+ },
+ "31|multi_session_reasoning|1": {
+  "score": 0.375,
+  "note": "No night bus $80 saving (denies it), no Gion Corner; three festivals only partial"
+ },
+ "32|abstention|1": {
+  "score": 1
+ },
+ "32|preference_following|1": {
+  "score": 1
+ },
+ "33|information_extraction|0": {
+  "score": 1
+ },
+ "33|temporal_reasoning|1": {
+  "score": 1
+ },
+ "34|contradiction_resolution|0": {
+  "score": 0.75,
+  "note": "Notes contradiction but resolves it itself rather than asking which is correct"
+ },
+ "34|instruction_following|0": {
+  "score": 0,
+  "note": "No ticketing platform named"
+ },
+ "34|summarization|1": {
+  "score": 0.7,
+  "note": "June 10 session and May 10 Crowd Management Seminar missing"
+ },
+ "35|contradiction_resolution|1": {
+  "score": 0.125,
+  "note": "Answers yes without noting contradiction or asking"
+ },
+ "35|instruction_following|0": {
+  "score": 1
+ },
+ "35|multi_session_reasoning|1": {
+  "score": 0.667,
+  "note": "Says 36 activities, not five; expense tracking missing"
+ },
+ "1|knowledge_update|0": {
+  "score": 1
+ },
+ "1|preference_following|1": {
+  "score": 1
+ },
+ "1|summarization|1": {
+  "score": 0.44,
+  "note": "Response truncated; misses Flask endpoint, Docker image/health-check refinement, read replicas, JSONL formatting, Context API; others partial"
+ },
+ "2|event_ordering|0": {
+  "score": 0.4,
+  "note": "Misses missing interactions, parallel processing, feedback collection/querying, advanced caching; caching out of order; MF only partial"
+ },
+ "2|multi_session_reasoning|1": {
+  "score": 0.92,
+  "note": "News-domain fine-tuning only referenced, not recommended"
+ },
+ "3|knowledge_update|0": {
+  "score": 1
+ },
+ "3|temporal_reasoning|0": {
+  "score": 0.5,
+  "note": "Answers 17 days using extended deadline; 14 days only as secondary"
+ },
+ "4|event_ordering|0": {
+  "score": 0.55,
+  "note": "Misses tokenizer, PyTorch upgrades, version locking; REST API out of order; distributed training and auth only partial"
+ },
+ "4|instruction_following|0": {
+  "score": 1
+ },
+ "5|abstention|1": {
+  "score": 0,
+  "note": "Provides detailed Kong config instead of abstaining"
+ },
+ "5|knowledge_update|0": {
+  "score": 1
+ },
+ "5|preference_following|0": {
+  "score": 0.75,
+  "note": "Does not frame deployment complexity as a trade-off"
+ },
+ "5|multi_session_reasoning|1": {
+  "score": 0.8,
+  "note": "Replaces per-request revocation middleware; pushes invalidation rather than webhook/push sync"
+ },
+ "6|instruction_following|0": {
+  "score": 1
+ },
+ "7|contradiction_resolution|0": {
+  "score": 1
+ },
+ "7|knowledge_update|1": {
+  "score": 0.5,
+  "note": "Mentions 6/91% but refuses to commit, treats as contradiction"
+ },
+ "7|preference_following|1": {
+  "score": 0.83,
+  "note": "Verification is symbolic substitution, not numerical"
+ },
+ "5|summarization|1": {
+  "score": 0.65,
+  "note": "Truncated; misses client-side token storage, user data caching/invalidation, Nginx load balancing; logging partial"
+ },
+ "8|contradiction_resolution|1": {
+  "score": 0.75,
+  "note": "Answers yes and assumes; flags contradiction only weakly without clearly asking which is correct"
+ },
+ "9|contradiction_resolution|0": {
+  "score": 1
+ },
+ "9|instruction_following|0": {
+  "score": 0.75,
+  "note": "Interpretation of P(B|A) not explicitly explained"
+ },
+ "10|contradiction_resolution|1": {
+  "score": 1
+ },
+ "10|knowledge_update|1": {
+  "score": 1
+ },
+ "10|temporal_reasoning|0": {
+  "score": 1
+ },
+ "11|contradiction_resolution|1": {
+  "score": 0.875,
+  "note": "Opens with 'Yes' before flagging contradiction"
+ },
+ "11|knowledge_update|0": {
+  "score": 0,
+  "note": "States 25, not 30"
+ },
+ "12|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Answers yes; no contradiction noted or clarification asked"
+ },
+ "12|knowledge_update|1": {
+  "score": 1
+ },
+ "12|knowledge_update|0": {
+  "score": 0.5,
+  "note": "Gives 12 as latest count; 18 and 50 km mentioned only as earlier stages"
+ },
+ "12|summarization|1": {
+  "score": 0.2,
+  "note": "Focuses on later career; misses STAR prep, offer negotiation, Trello/TPA networking, Sharon"
+ },
+ "11|multi_session_reasoning|1": {
+  "score": 0.8,
+  "note": "No online/offline balance"
+ },
+ "13|preference_following|0": {
+  "score": 1
+ },
+ "13|knowledge_update|1": {
+  "score": 1
+ },
+ "14|event_ordering|1": {
+  "score": 0.93,
+  "note": "Events/staking stage only partially covered"
+ },
+ "14|summarization|1": {
+  "score": 0.69,
+  "note": "Truncated; networking missing; DeFi lending/liquidity, ADA staking and learning paths only partial"
+ },
+ "15|temporal_reasoning|0": {
+  "score": 1
+ },
+ "13|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "Adjusting price target and prioritizing covering-yield properties only partial"
+ },
+ "16|event_ordering|0": {
+  "score": 0.71,
+  "note": "Consult prep, medication follow-ups, cholesterol and later follow-ups only partially covered"
+ },
+ "16|preference_following|1": {
+  "score": 0.875,
+  "note": "Suggests manual spreadsheet log and pill organizer"
+ },
+ "17|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Answers yes; contradiction not noted"
+ },
+ "17|instruction_following|0": {
+  "score": 1
+ },
+ "17|summarization|0": {
+  "score": 0.875,
+  "note": "Digital detox not mentioned"
+ },
+ "18|instruction_following|0": {
+  "score": 1
+ },
+ "18|temporal_reasoning|1": {
+  "score": 0.5,
+  "note": "States 47 days, not 46"
+ },
+ "17|summarization|1": {
+  "score": 0.4,
+  "note": "Misses curtain evaluation, cheaper alternatives, deadline; evening routine partial"
+ },
+ "19|multi_session_reasoning|0": {
+  "score": 0.81,
+  "note": "Total given as 8 direct/14 overall with different set; second monitor missing"
+ },
+ "20|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Answers yes; contradiction about never reviewing not noted"
+ },
+ "19|temporal_reasoning|1": {
+  "score": 0.25,
+  "note": "Answers 2 weeks, not 11"
+ },
+ "21|contradiction_resolution|0": {
+  "score": 1
+ },
+ "21|contradiction_resolution|1": {
+  "score": 1
+ },
+ "21|temporal_reasoning|0": {
+  "score": 1
+ },
+ "22|abstention|1": {
+  "score": 0,
+  "note": "Invents detailed reasoning instead of abstaining"
+ },
+ "22|information_extraction|0": {
+  "score": 1
+ },
+ "22|knowledge_update|0": {
+  "score": 1
+ },
+ "23|knowledge_update|1": {
+  "score": 1
+ },
+ "23|instruction_following|1": {
+  "score": 1
+ },
+ "24|contradiction_resolution|1": {
+  "score": 1
+ },
+ "24|instruction_following|1": {
+  "score": 1
+ },
+ "24|preference_following|1": {
+  "score": 0.5,
+  "note": "Also recommends oven-baking and slow cooker"
+ },
+ "25|event_ordering|0": {
+  "score": 0.44,
+  "note": "Misses business ideas follow-up, retention/loyalty, influencers, upselling; mentor feedback partial"
+ },
+ "25|instruction_following|1": {
+  "score": 1
+ },
+ "26|information_extraction|0": {
+  "score": 1
+ },
+ "26|instruction_following|0": {
+  "score": 1
+ },
+ "27|abstention|1": {
+  "score": 0,
+  "note": "Invents article contents"
+ },
+ "27|event_ordering|1": {
+  "score": 0.5,
+  "note": "Misses adaptability, stamina/vision, pressing, mental resilience; captaincy and tactical items partial"
+ },
+ "27|temporal_reasoning|1": {
+  "score": 1
+ },
+ "28|event_ordering|1": {
+  "score": 0.7,
+  "note": "Misses research submission and applying research to training; workshop reflection and joint research partial"
+ },
+ "28|information_extraction|0": {
+  "score": 0.5,
+  "note": "Says purchase date not available"
+ },
+ "29|abstention|1": {
+  "score": 1
+ },
+ "29|instruction_following|1": {
+  "score": 1
+ },
+ "29|knowledge_update|0": {
+  "score": 1
+ },
+ "29|preference_following|1": {
+  "score": 0.83,
+  "note": "Weight-swing speed link only partly explained"
+ },
+ "29|multi_session_reasoning|1": {
+  "score": 0.75,
+  "note": "Total given as $856, not $356"
+ },
+ "30|multi_session_reasoning|0": {
+  "score": 1
+ },
+ "31|contradiction_resolution|0": {
+  "score": 1
+ },
+ "31|information_extraction|1": {
+  "score": 0.25,
+  "note": "Wrong main event (sushi class); panoramic landmark alternative partly matches"
+ },
+ "32|information_extraction|0": {
+  "score": 1
+ },
+ "32|knowledge_update|1": {
+  "score": 0.5,
+  "note": "Presents April 1 vs April 5 without committing to April 1"
+ },
+ "32|knowledge_update|0": {
+  "score": 0.5,
+  "note": "Gives $800 as latest; $420 only as earlier"
+ },
+ "33|abstention|1": {
+  "score": 1
+ },
+ "33|instruction_following|0": {
+  "score": 1
+ },
+ "33|multi_session_reasoning|1": {
+  "score": 0.83,
+  "note": "No single dedicated allergy-free station"
+ },
+ "34|knowledge_update|1": {
+  "score": 1
+ },
+ "35|contradiction_resolution|0": {
+  "score": 1
+ },
+ "34|summarization|0": {
+  "score": 0.2,
+  "note": "Misses municipality follow-up, DJ fee reallocation, falafel replacement; second stage and stress management partial"
+ },
+ "35|knowledge_update|0": {
+  "score": 0.5,
+  "note": "Gives December 20 as final; Dec 17 only intermediate"
+ },
+ "35|summarization|0": {
+  "score": 0.75,
+  "note": "Truncated; Jay reception, ornament reveals, breaks missing; Secret Santa partial"
+ },
+ "1|knowledge_update|1": {
+  "score": 1,
+  "note": ""
+ },
+ "1|temporal_reasoning|1": {
+  "score": 0.5,
+  "note": "Answered 15 days using April 5; 10 days/April 10 only as alternative"
+ },
+ "2|event_ordering|1": {
+  "score": 0.1,
+  "note": "Only microservices item matches; other nine reference items missing"
+ },
+ "2|instruction_following|0": {
+  "score": 0.5,
+  "note": "Many dependencies listed without version numbers"
+ },
+ "3|contradiction_resolution|1": {
+  "score": 0.75,
+  "note": "Cites both statements but resolves via timeline instead of clearly flagging contradiction and asking"
+ },
+ "2|summarization|0": {
+  "score": 0.71,
+  "note": "Missing Docker Compose detail, Scrapy delay/concurrency settings, NewsAPI caching/retries; PostgreSQL rationale thin"
+ },
+ "4|abstention|0": {
+  "score": 1,
+  "note": ""
+ },
+ "3|summarization|1": {
+  "score": 0.4,
+  "note": "Missing Agile two-week sprint planning, Flask API security, Docker image optimization; partial on ML APIs"
+ },
+ "4|preference_following|1": {
+  "score": 1,
+  "note": ""
+ },
+ "5|abstention|0": {
+  "score": 1,
+  "note": ""
+ },
+ "5|event_ordering|1": {
+  "score": 0.17,
+  "note": "Only matchmaking matches; game loop, RabbitMQ, lag compensation, anti-cheat, platform abstraction missing"
+ },
+ "5|temporal_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "5|summarization|0": {
+  "score": 0.63,
+  "note": "Missing preference vs skill strategies (overlapping buckets, weighted prefs); partial on adaptive skill updates"
+ },
+ "6|knowledge_update|1": {
+  "score": 0,
+  "note": "Answered 22 minutes instead of 17"
+ },
+ "6|summarization|1": {
+  "score": 0.8,
+  "note": "No Hessian/critical point classification"
+ },
+ "7|event_ordering|1": {
+  "score": 0.38,
+  "note": "Trig/exponential integrating factor variations, logistic harvesting optimization missing; others partial"
+ },
+ "7|multi_session_reasoning|0": {
+  "score": 0.75,
+  "note": "No ~1350 figure for exponential; harvesting stable value given as ~936 with 64 as unstable"
+ },
+ "8|event_ordering|0": {
+  "score": 0.5,
+  "note": "Missing necessary/sufficient conditions, one-way/trapdoor functions, combined applications; Carmichael and Euler's theorem partial/out of order"
+ },
+ "8|preference_following|1": {
+  "score": 0.83,
+  "note": "Suggests testing rational root candidates (trial)"
+ },
+ "9|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Answers yes without flagging the never-completed statement or asking"
+ },
+ "9|preference_following|0": {
+  "score": 0.75,
+  "note": "Main example not dice-based; dice only as brief comparison"
+ },
+ "10|abstention|1": {
+  "score": 0,
+  "note": "Lists detailed preferences instead of saying info unavailable"
+ },
+ "10|instruction_following|1": {
+  "score": 0.17,
+  "note": "Lists tools but almost no export/save steps or file formats"
+ },
+ "11|abstention|0": {
+  "score": 0.25,
+  "note": "Provides background details about Omar; only partly says qualifications unknown"
+ },
+ "8|multi_session_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "8|summarization|0": {
+  "score": 0.9,
+  "note": "Euler/Fermat link to modular exponentiation only partial"
+ },
+ "11|temporal_reasoning|0": {
+  "score": 0.5,
+  "note": "Says booking date unknown; one-day-before only as alternative"
+ },
+ "12|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "12|multi_session_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "13|event_ordering|0": {
+  "score": 0.5,
+  "note": "Missing contractor management, viewing with agent and contractor, commercial property; several partial/out of order"
+ },
+ "12|summarization|0": {
+  "score": 0.5,
+  "note": "Missing age concerns, salary-fit analysis, cover letter keywords, Matthew/workshops"
+ },
+ "14|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "14|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "15|abstention|0": {
+  "score": 1,
+  "note": ""
+ },
+ "15|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "15|temporal_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "15|preference_following|1": {
+  "score": 0.17,
+  "note": "Morning mixes strength and cardio; no evening cardio separation"
+ },
+ "16|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "17|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "17|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "17|event_ordering|0": {
+  "score": 0.6,
+  "note": "Sleep science interest, nap monitoring, firmware and sleep disruption missing; late firmware items lumped together"
+ },
+ "18|information_extraction|1": {
+  "score": 0.5,
+  "note": "Mentions April 28 without 2 PM and gives April 29 3 PM as the answer"
+ },
+ "18|abstention|0": {
+  "score": 0.5,
+  "note": "Says no detailed record but still lists techniques as learned"
+ },
+ "18|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "19|information_extraction|1": {
+  "score": 1,
+  "note": ""
+ },
+ "19|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "20|abstention|1": {
+  "score": 1,
+  "note": ""
+ },
+ "19|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "20|event_ordering|0": {
+  "score": 0.5,
+  "note": "Missing housing/market data, celebrations, babysitting offers, Crystal household/financial negotiations"
+ },
+ "20|temporal_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "21|knowledge_update|1": {
+  "score": 0,
+  "note": "Answered 4,600 TRY instead of 4,550"
+ },
+ "22|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "22|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "23|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "22|summarization|1": {
+  "score": 1,
+  "note": ""
+ },
+ "23|temporal_reasoning|1": {
+  "score": 1,
+  "note": ""
+ },
+ "23|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "23|summarization|1": {
+  "score": 0.38,
+  "note": "Missing knife techniques, dough kneading, sauce emulsification, Indian cuisine; plan details partial (empty nugget excluded)"
+ },
+ "24|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "25|event_ordering|1": {
+  "score": 0.56,
+  "note": "Missing trust concerns, trial projects, effectiveness/creative freedom; business-goals item out of order"
+ },
+ "25|preference_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "25|summarization|1": {
+  "score": 0.19,
+  "note": "Missing partnership vetting, age differences, expense breakdown, marketing budget, acquisition decline; others partial"
+ },
+ "26|information_extraction|1": {
+  "score": 0.5,
+  "note": "Missing integration into therapy/treatment plans and promotion; budget allocation absent"
+ },
+ "27|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "27|instruction_following|1": {
+  "score": 0.75,
+  "note": "Little on changing frequency over time"
+ },
+ "25|summarization|0": {
+  "score": 0.5,
+  "note": "Missing Denise's app proposal, Healing Minds clinic, marketing assistant hire"
+ },
+ "26|summarization|1": {
+  "score": 0.4,
+  "note": "Missing sponsorships, workbook pricing, online course, engagement enhancements, expansion pivot"
+ },
+ "28|multi_session_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "29|contradiction_resolution|0": {
+  "score": 1,
+  "note": ""
+ },
+ "28|preference_following|1": {
+  "score": 0.5,
+  "note": "Footwear first but recovery tools not prioritized"
+ },
+ "29|temporal_reasoning|0": {
+  "score": 1,
+  "note": ""
+ },
+ "30|contradiction_resolution|1": {
+  "score": 1,
+  "note": ""
+ },
+ "30|instruction_following|0": {
+  "score": 1,
+  "note": ""
+ },
+ "31|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "31|event_ordering|0": {
+  "score": 0.25,
+  "note": "Most reference items (dining costs, street food, follow-ups, site tips, tours, presentations) missing"
+ },
+ "30|summarization|0": {
+  "score": 0.69,
+  "note": "No check-ins or celebration/reflection content; communication alignment partial"
+ },
+ "32|contradiction_resolution|1": {
+  "score": 0.25,
+  "note": "Answers yes without flagging the never-used statement or asking"
+ },
+ "32|event_ordering|1": {
+  "score": 0.1,
+  "note": "Only apps and general safety partially match; most reference items missing and out of order"
+ },
+ "33|contradiction_resolution|0": {
+  "score": 0.25,
+  "note": "Cites only the never statement; denies contradiction, no question"
+ },
+ "33|information_extraction|1": {
+  "score": 0.92,
+  "note": "Final check-in on delivery times/guest count only partial"
+ },
+ "33|temporal_reasoning|0": {
+  "score": 0,
+  "note": "Answered 3 days instead of 5"
+ },
+ "34|instruction_following|1": {
+  "score": 0.67,
+  "note": "Social media mentioned briefly; little on reach/engagement or platforms"
+ },
+ "34|information_extraction|0": {
+  "score": 1,
+  "note": ""
+ },
+ "32|multi_session_reasoning|1": {
+  "score": 0.86,
+  "note": "Disputes 15-day coverage and daily calls (says every 2 days)"
+ },
+ "33|summarization|0": {
+  "score": 0.5,
+  "note": "Missing saxophonist/DIY budget decisions, Sylvia/Jacob conflicts, videographer backup"
+ },
+ "35|event_ordering|1": {
+  "score": 0.4,
+  "note": "Missing lighting balance, memory sharing, moment of silence, wreaths, candle safety"
+ },
+ "35|preference_following|1": {
+  "score": 1,
+  "note": ""
+ }
+}
