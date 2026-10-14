@@ -17,5 +17,13 @@ for x in beam: by[x['ability']].append(x['score'])
 print(f"\nBEAM-1M, official scoring (GPT-4.1-mini judge; event ordering = Kendall tau_norm): {mean([mean(v) for v in by.values()]):.3f} ({len(beam)} questions)")
 for k, v in sorted(by.items(), key=lambda kv: -mean(kv[1])): print(f'  {k:28s} {mean(v):.3f}  n={len(v)}')
 
+keys = {x['key'] for x in beam}
+for name, f in [('RAG, full 32K context', 'rag_full32k'), ('RAG, paper setup (top 5)', 'rag_top5')]:
+    rb = collections.defaultdict(list)
+    for l in open(R + f'beam_1m/rag_same_model/{f}_official_verdicts_gpt-4.1-mini.jsonl'):
+        x = json.loads(l)
+        if x['key'] in keys: rb[x['ability']].append(x['score'])
+    print(f"BEAM-1M, same model, {name}: {mean([mean(v) for v in rb.values()]):.3f} (same {len(keys)} questions)")
+
 rows = [json.loads(l) for l in open(R + 'beam_1m/answers.jsonl')] + [json.loads(l) for l in open(R + 'longmemeval_s/answers.jsonl')]
 print(f"\nAnswering model tokens (both benchmarks): {sum(r['prompt_tokens'] for r in rows):,} prompt ({sum(r['cached_tokens'] for r in rows):,} cached), {sum(r['completion_tokens'] for r in rows):,} completion")

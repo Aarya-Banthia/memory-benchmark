@@ -2,3 +2,4 @@ data/
 third_party/
 __pycache__/
 *.log
+baselines/index/

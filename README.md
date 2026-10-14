@@ -4,9 +4,9 @@
 
 ### Relevance can't be judged at write time.
 
-A cheap model that searches the raw conversation history, at the moment a question is asked, scores **2.2x the best published system** on a 1M-token memory benchmark.
+Same cheap model, same questions, official scoring: searching the raw conversation history at the moment a question is asked scores **0.746** on a 1M-token memory benchmark. RAG scores **0.568**.
 
-![BEAM-1M](https://img.shields.io/badge/BEAM--1M-0.746-2a78d6) ![best published](https://img.shields.io/badge/best_published-0.336-8f8d86) ![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-94.6%25-2a78d6) ![cost](https://img.shields.io/badge/cost-~%240.01_per_question-8f8d86) ![license](https://img.shields.io/badge/license-MIT-8f8d86)
+![BEAM-1M](https://img.shields.io/badge/BEAM--1M-0.746-2a78d6) ![RAG, same model](https://img.shields.io/badge/RAG,_same_model-0.568-8f8d86) ![LongMemEval-S](https://img.shields.io/badge/LongMemEval--S-94.6%25-2a78d6) ![cost](https://img.shields.io/badge/cost-~%240.01_per_question-8f8d86) ![license](https://img.shields.io/badge/license-MIT-8f8d86)
 
 [Why read-time](#why-read-time-memory) · [Results](#results) · [How it works](#how-the-harness-works) · [Reproduce](#reproduce)
 
@@ -14,7 +14,7 @@ A cheap model that searches the raw conversation history, at the moment a questi
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/beam_vs_paper_dark.png">
-  <img alt="BEAM-1M average score: long-context model 0.26, RAG 0.31, LIGHT 0.34 (best in the BEAM paper), read-time search 0.746" src="assets/beam_vs_paper_light.png">
+  <img alt="BEAM-1M average score. BEAM paper with older models: long-context 0.26, RAG 0.31, LIGHT 0.34. Same model GLM-5.3-flash: RAG paper setup 0.50, RAG full 32K context 0.57, read-time search 0.746" src="assets/beam_vs_paper_light.png">
 </picture>
 
 ## Why read-time memory
@@ -46,7 +46,7 @@ The stored fact says nothing about Tuesdays or school drop-off. The extractor di
 
 1. **Future questions are unbounded.** An extractor has to anticipate every question that will ever be asked of the history. Nobody can do that, human or model.
 2. **Extraction is lossy and one-way.** Reasons, qualifiers, who said it, how sure they were, the exact wording and the order of events get compressed away. Nothing downstream can recover them.
-3. **Change gets flattened.** Overwriting "lives in Pune" with "lives in Mumbai" erases the fact that something changed, and when. Questions about updates, contradictions and sequences need exactly that history.
+3. **Change gets flattened.** Overwriting "lives in Pune" with "lives in Mumbai" erases the fact that something changed, and when. Questions about updates, contradictions and sequences need exactly that history. On BEAM, this is where read-time search beats same-model RAG by the most: flagging contradictions 0.74 vs 0.35, using the latest value 0.76 vs 0.49.
 4. **Mistakes are silent and permanent.** A bad extraction is never revisited, because the source it came from was discarded.
 5. **Raw history improves with every model.** Extracted facts are frozen at the quality of the extractor that wrote them. The raw record can be re-read by next year's model, so read-time memory gets better for free.
 6. **Cost lands where the value is.** Write-time pays for an LLM call on every message, though most messages are never asked about. Read-time pays only when someone asks a question. Storing raw text is nearly free.
@@ -67,7 +67,7 @@ Both benchmarks were scored with their **official scoring code and official judg
 
 | Benchmark | Official judge | Score | Reference points |
 | --- | --- | --- | --- |
-| [BEAM](https://github.com/mohammadtavakoli78/BEAM), 1M-token conversations (699 of 700 questions) | GPT-4.1-mini, `src/evaluation/compute_metrics.py`; event ordering scored by Kendall tau as in `report_results.py` | **0.746** | BEAM paper at 1M: long-context models 0.19 to 0.26, RAG 0.27 to 0.31, LIGHT (paper's best) 0.28 to 0.34 |
+| [BEAM](https://github.com/mohammadtavakoli78/BEAM), 1M-token conversations (699 of 700 questions) | GPT-4.1-mini, `src/evaluation/compute_metrics.py`; event ordering scored by Kendall tau as in `report_results.py` | **0.746** | Same model (GLM-5.3-flash), paper's RAG setup: 0.497 (top 5), 0.568 (full 32K context). BEAM paper at 1M, older models: long-context 0.19 to 0.26, RAG 0.27 to 0.31, LIGHT (paper's best) 0.28 to 0.34 |
 | [LongMemEval-S](https://github.com/xiaowu0162/LongMemEval) (500 questions) | GPT-4o-2024-08-06, `src/evaluation/evaluate_qa.py` | **94.6%** | Paper: full-context GPT-4o 60.2%. Vendors self-report, on their own setups: Zep 71.2%, mem0 94.4% |
 
 - **Answering model:** GLM-5.3-flash (`zai/glm-5.3-flash`), a small, cheap model, called through an OpenAI-compatible router.
@@ -77,22 +77,24 @@ Both benchmarks were scored with their **official scoring code and official judg
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/beam_by_ability_dark.png">
-  <img alt="BEAM-1M score by memory ability, from 0.92 for following standing instructions down to 0.34 for ordering events" src="assets/beam_by_ability_light.png">
+  <img alt="BEAM-1M by ability, read-time search vs RAG with full 32K context, same model. Largest gaps: flagging contradictions 0.74 vs 0.35, using the latest value 0.76 vs 0.49, date reasoning 0.55 vs 0.33" src="assets/beam_by_ability_light.png">
 </picture>
 
-| Ability | Score |
-| --- | --- |
-| instruction_following | 0.921 |
-| preference_following | 0.913 |
-| information_extraction | 0.905 |
-| abstention | 0.857 |
-| knowledge_update | 0.764 |
-| multi_session_reasoning | 0.756 |
-| contradiction_resolution | 0.743 |
-| summarization | 0.709 |
-| temporal_reasoning | 0.552 |
-| event_ordering (Kendall tau, normalised) | 0.340 |
-| **Average of the 10 abilities** | **0.746** |
+| Ability | Read-time search | RAG, full 32K | RAG, paper setup (top 5) |
+| --- | --- | --- | --- |
+| contradiction_resolution | **0.743** | 0.354 | 0.346 |
+| knowledge_update | **0.764** | 0.486 | 0.457 |
+| temporal_reasoning | **0.552** | 0.331 | 0.200 |
+| instruction_following | **0.921** | 0.716 | 0.683 |
+| multi_session_reasoning | **0.756** | 0.589 | 0.452 |
+| information_extraction | **0.905** | 0.752 | 0.619 |
+| event_ordering (Kendall tau, normalised) | **0.340** | 0.228 | 0.202 |
+| abstention | **0.857** | 0.750 | 0.800 |
+| preference_following | **0.913** | 0.838 | 0.770 |
+| summarization | **0.709** | 0.641 | 0.437 |
+| **Average of the 10 abilities** | **0.746** | 0.568 | 0.497 |
+
+All three are answered by GLM-5.3-flash and scored on the same 699 questions with the official BEAM code and judge. Sorted by the size of the gap.
 
 ### LongMemEval-S by question type (official scoring)
 
@@ -118,10 +120,10 @@ Run `python3 summarize.py` to recompute every number above from the verdict file
 
 - **Single run.** All results come from one run with one answering model, with no seeds and no repeats.
 - **Vendor figures are self-reported** on their own models and harnesses, so this is not a controlled head-to-head with any memory product. The BEAM paper baselines do share the same scoring code and judge model as ours.
-- **Newer answering model than the paper's baselines.** The BEAM paper's baselines used the backbones of the time: Qwen 2.5, Llama 4 Maverick, Gemini 2 Flash and GPT-4.1-nano. GLM-5.3-flash is newer. Part of the gap may come from the model, not the method, and we have not run the paper's long-context or RAG baselines with GLM-5.3-flash.
+- **Model vs method.** The BEAM paper's baselines used older backbones (Qwen 2.5, Llama 4 Maverick, Gemini 2 Flash, GPT-4.1-nano). To separate the model from the method, we reran the paper's own RAG setup (one document per user-assistant pair, BAAI/bge-small-en-v1.5, official answer prompt) with GLM-5.3-flash: 0.497 with the paper's top 5, and 0.568 when RAG gets the full 32K context. So most of the jump from the paper's 0.31 is the newer model. Read-time search adds **+0.18 on top**, with the biggest gains on contradictions (0.74 vs 0.35), updated facts (0.76 vs 0.49) and date reasoning (0.55 vs 0.33). The only change to the paper's RAG was removing duplicate documents, which can only help RAG. We did not rerun the paper's long-context or LIGHT baselines.
 - **Event ordering is the weak spot.** Our answers score 0.75 on BEAM's rubric judge for this ability, but 0.34 on the official Kendall-tau metric. That metric splits the answer on newlines and aligns it line by line with the reference, so formatting matters. The F1 of that alignment is 0.16.
 - **Temporal reasoning (0.55 on BEAM)** is the other clear gap.
-- **Read-time search is slower** than a single vector lookup: about 3 model steps per question on LongMemEval and about 7 on BEAM-1M.
+- **Read-time search is slower and reads more** than a single retrieval: about 3 model steps per question on LongMemEval and about 7 on BEAM-1M. On BEAM it uses about 103K prompt tokens per question (74% served from cache) against about 23K for full-context RAG.
 - **One BEAM question has no answer** because of a network stall during the run.
 - **The verify step was fixed before the final run.** An earlier version truncated the retrieved evidence before re-checking, which wrongly overturned correct answers. Both benchmarks were fully re-run after the fix, and only the fixed run is reported here.
 - **Cross-check verdicts.** We also graded every answer with Claude as an independent judge, before the official re-grade: 93.4% on LongMemEval and 0.73 on BEAM. Those verdicts are included as cross-checks, not headline numbers.
@@ -142,6 +144,10 @@ results/
   beam_1m/answers.jsonl                                    every answer, with retrieved and gold message ids
   beam_1m/official_verdicts_gpt-4.1-mini.jsonl             every rubric verdict with the judge's reasons
   beam_1m/crosscheck_verdicts_claude.json
+baselines/
+  beam_rag_index.py     builds the paper-style RAG index (turn pairs, bge-small-en-v1.5)
+  beam_rag_answer.py    paper's RAG setup, answered by the same model as the harness
+results/beam_1m/rag_same_model/   RAG answers and official verdicts (top 5, and full 32K context)
 summarize.py            recomputes all tables from results/
 assets/                 charts and diagram (light and dark); make_charts.py and make_diagram.py redraw them
 ```
@@ -176,6 +182,14 @@ python3 harness/beam_harness.py results/beam_1m/answers.jsonl
 export OPENAI_API_KEY=...
 python3 grading/lme_official.py results/longmemeval_s/answers.jsonl results/longmemeval_s/official_verdicts_gpt-4o-2024-08-06.json
 python3 grading/beam_official.py
+
+# same-model RAG baselines (BEAM-1M)
+pip install sentence-transformers
+python3 baselines/beam_rag_index.py
+python3 baselines/beam_rag_answer.py 5 results/beam_1m/rag_same_model/rag_top5_answers.jsonl
+python3 baselines/beam_rag_answer.py 100 results/beam_1m/rag_same_model/rag_full32k_answers.jsonl
+python3 grading/beam_official.py results/beam_1m/rag_same_model/rag_top5_answers.jsonl results/beam_1m/rag_same_model/rag_top5_official_verdicts_gpt-4.1-mini.jsonl
+python3 grading/beam_official.py results/beam_1m/rag_same_model/rag_full32k_answers.jsonl results/beam_1m/rag_same_model/rag_full32k_official_verdicts_gpt-4.1-mini.jsonl
 python3 summarize.py
 ```
 

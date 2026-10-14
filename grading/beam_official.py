@@ -39,9 +39,10 @@ exec(msrc[msrc.index('def llm_equivalence'):msrc.index('def semantic_fact_precis
 exec(msrc[msrc.index('def event_ordering_score'):], ns)
 model = GPT()
 
-rows = {json.loads(l)['key']: json.loads(l) for l in open(ROOT + '/results/beam_1m/answers.jsonl')}
+ANS = sys.argv[1] if len(sys.argv) > 1 else ROOT + '/results/beam_1m/answers.jsonl'
+rows = {json.loads(l)['key']: json.loads(l) for l in open(ANS)}
 convs = {str(c['conversation_id']): ast.literal_eval(c['probing_questions']) for c in pq.read_table(os.environ.get('BEAM_DATA', ROOT + '/data/beam_1m.parquet')).to_pylist()}
-OUT = ROOT + '/results/beam_1m/official_verdicts_gpt-4.1-mini.jsonl'
+OUT = sys.argv[2] if len(sys.argv) > 2 else ROOT + '/results/beam_1m/official_verdicts_gpt-4.1-mini.jsonl'
 import os
 done = {json.loads(l)['key'] for l in open(OUT)} if os.path.exists(OUT) else set()
 LK = threading.Lock()
