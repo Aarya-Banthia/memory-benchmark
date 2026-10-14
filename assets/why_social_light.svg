@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="1200" height="1200" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6f6e69"/></marker></defs>
+<text x="60" y="100" font-size="50" font-weight="800" fill="#0b0b0b">The difference is when</text>
+<text x="60" y="160" font-size="50" font-weight="800" fill="#0b0b0b">relevance gets decided.</text>
+<text x="60" y="1170" font-size="20" fill="#6f6e69">github.com/Aarya-Banthia/memory-benchmark</text>
+<line x1="600.0" y1="250" x2="600.0" y2="1130" stroke="#0b0b0b" stroke-width="2.5" stroke-dasharray="8 8"/>
+<text x="600.0" y="232" text-anchor="middle" font-size="26" font-weight="700" fill="#0b0b0b">a question arrives</text>
+<text x="60" y="330" font-size="34" font-weight="800" fill="#0b0b0b">Write-time memory</text>
+<text x="60" y="368" font-size="22" fill="#6f6e69">how most memory layers work</text>
+<rect x="50.0" y="400" width="235" height="120" rx="16" fill="#f4f3f0" stroke="none" stroke-width="3.5"/>
+<text x="70.0" y="450" font-size="28" font-weight="800" fill="#0b0b0b">Chat</text>
+<text x="70.0" y="488" font-size="21" fill="#52514e">every message</text>
+<line x1="291.0" y1="460.0" x2="317.0" y2="460.0" stroke="#6f6e69" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="325.0" y="400" width="235" height="120" rx="16" fill="#fdf0ea" stroke="#eb6834" stroke-width="3.5"/>
+<text x="345.0" y="450" font-size="28" font-weight="800" fill="#0b0b0b">Extract facts</text>
+<text x="345.0" y="488" font-size="21" fill="#52514e">guess what matters</text>
+<line x1="566.0" y1="460.0" x2="632.0" y2="460.0" stroke="#6f6e69" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="442.5" y1="526" x2="442.5" y2="554" stroke="#eb6834" stroke-width="3.5"/>
+<text x="442.5" y="592" text-anchor="middle" font-size="25" font-weight="800" fill="#0b0b0b">Judged here, before</text>
+<text x="442.5" y="624" text-anchor="middle" font-size="23" font-weight="400" fill="#52514e">any question exists.</text>
+<text x="442.5" y="656" text-anchor="middle" font-size="23" font-weight="400" fill="#52514e">What it drops is gone.</text>
+<rect x="640.0" y="400" width="235" height="120" rx="16" fill="#f4f3f0" stroke="none" stroke-width="3.5"/>
+<text x="660.0" y="450" font-size="28" font-weight="800" fill="#0b0b0b">Retrieve</text>
+<text x="660.0" y="488" font-size="21" fill="#52514e">similar facts</text>
+<line x1="881.0" y1="460.0" x2="907.0" y2="460.0" stroke="#6f6e69" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="915.0" y="400" width="235" height="120" rx="16" fill="#f4f3f0" stroke="none" stroke-width="3.5"/>
+<text x="935.0" y="450" font-size="28" font-weight="800" fill="#0b0b0b">Answer</text>
+<text x="935.0" y="488" font-size="21" fill="#52514e">from what survived</text>
+<text x="60" y="760" font-size="34" font-weight="800" fill="#0b0b0b">Read-time memory</text>
+<text x="60" y="798" font-size="22" fill="#6f6e69">keep everything, decide when asked</text>
+<rect x="50.0" y="830" width="235" height="120" rx="16" fill="#f4f3f0" stroke="none" stroke-width="3.5"/>
+<text x="70.0" y="880" font-size="28" font-weight="800" fill="#0b0b0b">Chat</text>
+<text x="70.0" y="918" font-size="21" fill="#52514e">every message</text>
+<line x1="291.0" y1="890.0" x2="317.0" y2="890.0" stroke="#6f6e69" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="325.0" y="830" width="235" height="120" rx="16" fill="#f4f3f0" stroke="none" stroke-width="3.5"/>
+<text x="345.0" y="880" font-size="28" font-weight="800" fill="#0b0b0b">Keep it raw</text>
+<text x="345.0" y="918" font-size="21" fill="#52514e">nothing thrown away</text>
+<line x1="566.0" y1="890.0" x2="632.0" y2="890.0" stroke="#6f6e69" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="640.0" y="830" width="235" height="120" rx="16" fill="#eaf2fc" stroke="#2a78d6" stroke-width="3.5"/>
+<text x="660.0" y="880" font-size="28" font-weight="800" fill="#0b0b0b">Search, read</text>
+<text x="660.0" y="918" font-size="21" fill="#52514e">with the question</text>
+<line x1="881.0" y1="890.0" x2="907.0" y2="890.0" stroke="#6f6e69" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="757.5" y1="956" x2="757.5" y2="984" stroke="#2a78d6" stroke-width="3.5"/>
+<text x="640.0" y="1022" text-anchor="start" font-size="25" font-weight="800" fill="#0b0b0b">Judged here, with</text>
+<text x="640.0" y="1054" text-anchor="start" font-size="23" font-weight="400" fill="#52514e">the question in hand.</text>
+<rect x="915.0" y="830" width="235" height="120" rx="16" fill="#f4f3f0" stroke="none" stroke-width="3.5"/>
+<text x="935.0" y="880" font-size="28" font-weight="800" fill="#0b0b0b">Verify</text>
+<text x="935.0" y="918" font-size="21" fill="#52514e">against the words</text>
+</svg>

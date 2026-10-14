@@ -64,3 +64,48 @@ def draw(th):
     open(OUT + f'why_{th}.svg', 'w').write('\n'.join(o))
 for th in T: draw(th)
 print('ok')
+
+# ---- social version: square, large text, readable on a phone ----
+def draw_social(th, W=1200, H=1200):
+    t = T[th]; o = []
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="Inter, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">')
+    o.append(f'<rect width="{W}" height="{H}" fill="{t["bg"]}"/>')
+    o.append(f'<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="{t["muted"]}"/></marker></defs>')
+    o.append(f'<text x="60" y="100" font-size="50" font-weight="800" fill="{t["ink"]}">The difference is when</text>')
+    o.append(f'<text x="60" y="160" font-size="50" font-weight="800" fill="{t["ink"]}">relevance gets decided.</text>')
+    o.append(f'<text x="60" y="{H-30}" font-size="20" fill="{t["muted"]}">github.com/Aarya-Banthia/memory-benchmark</text>')
+    qx = W / 2; cw, ch, gap = 235, 120, 40
+    o.append(f'<line x1="{qx}" y1="250" x2="{qx}" y2="{H-70}" stroke="{t["q"]}" stroke-width="2.5" stroke-dasharray="8 8"/>')
+    o.append(f'<text x="{qx}" y="232" text-anchor="middle" font-size="26" font-weight="700" fill="{t["ink"]}">a question arrives</text>')
+    def row(y, label, sub, acc, tint, left, right, side, idx, callout):
+        o.append(f'<text x="60" y="{y}" font-size="34" font-weight="800" fill="{t["ink"]}">{esc(label)}</text>')
+        o.append(f'<text x="60" y="{y+38}" font-size="22" fill="{t["muted"]}">{esc(sub)}</text>')
+        cy = y + 70
+        xl = [qx - 40 - cw - gap - cw, qx - 40 - cw][-len(left):] if len(left) <= 2 else []
+        xr = [qx + 40, qx + 40 + cw + gap][:len(right)]
+        xs = [(x, c, 'L', i) for i, (x, c) in enumerate(zip(xl, left))] + [(x, c, 'R', i) for i, (x, c) in enumerate(zip(xr, right))]
+        for k, (x, (title, s1), sd, i) in enumerate(xs):
+            dec = (sd == side and i == idx)
+            o.append(f'<rect x="{x}" y="{cy}" width="{cw}" height="{ch}" rx="16" fill="{tint if dec else t["chip"]}" stroke="{acc if dec else "none"}" stroke-width="3.5"/>')
+            o.append(f'<text x="{x+20}" y="{cy+50}" font-size="28" font-weight="800" fill="{t["ink"]}">{esc(title)}</text>')
+            o.append(f'<text x="{x+20}" y="{cy+88}" font-size="21" fill="{t["ink2"]}">{esc(s1)}</text>')
+            if k + 1 < len(xs):
+                nx = xs[k + 1][0]
+                o.append(f'<line x1="{x+cw+6}" y1="{cy+ch/2}" x2="{nx-8}" y2="{cy+ch/2}" stroke="{t["muted"]}" stroke-width="2.5" marker-end="url(#ah)"/>')
+            if dec:
+                cx = x + cw / 2
+                o.append(f'<line x1="{cx}" y1="{cy+ch+6}" x2="{cx}" y2="{cy+ch+34}" stroke="{acc}" stroke-width="3.5"/>')
+                anchor, tx = ('start', x) if sd == 'R' else ('middle', cx)
+                for j, ln in enumerate(callout):
+                    o.append(f'<text x="{tx}" y="{cy+ch+72+j*32}" text-anchor="{anchor}" font-size="{25 if j == 0 else 23}" font-weight="{800 if j == 0 else 400}" fill="{t["ink"] if j == 0 else t["ink2"]}">{esc(ln)}</text>')
+    row(330, 'Write-time memory', 'how most memory layers work', t['w_acc'], t['w_tint'],
+        [('Chat', 'every message'), ('Extract facts', 'guess what matters')],
+        [('Retrieve', 'similar facts'), ('Answer', 'from what survived')],
+        'L', 1, ['Judged here, before', 'any question exists.', 'What it drops is gone.'])
+    row(760, 'Read-time memory', 'keep everything, decide when asked', t['r_acc'], t['r_tint'],
+        [('Chat', 'every message'), ('Keep it raw', 'nothing thrown away')],
+        [('Search, read', 'with the question'), ('Verify', 'against the words')],
+        'R', 0, ['Judged here, with', 'the question in hand.'])
+    o.append('</svg>')
+    open(OUT + f'why_social_{th}.svg', 'w').write('\n'.join(o))
+for th in T: draw_social(th)
